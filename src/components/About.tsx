@@ -22,34 +22,31 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              About Me
-            </span>
+    <section id="about" className="py-32 px-6 bg-gray-50">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-6xl font-thin text-gray-900 mb-6 tracking-tight">
+            About Me
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
+          <div className="w-16 h-0.5 bg-gray-900 mx-auto"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <p className="text-lg text-gray-300 leading-relaxed">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-8">
+            <p className="text-xl text-gray-600 leading-relaxed font-light">
               I'm a passionate full-stack developer with over 5 years of experience creating 
               digital solutions that make a difference. I specialize in modern web technologies 
               and love turning complex problems into simple, beautiful designs.
             </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
+            <p className="text-xl text-gray-600 leading-relaxed font-light">
               When I'm not coding, you'll find me exploring new technologies, contributing to 
-              open-source projects, or sharing knowledge with the developer community. I believe 
-              in writing code that not only works but also inspires.
+              open-source projects, or sharing knowledge with the developer community.
             </p>
-            <div className="flex flex-wrap gap-4 pt-4">
+            <div className="flex flex-wrap gap-3 pt-6">
               {['JavaScript', 'TypeScript', 'React', 'Node.js', 'Python'].map((tech) => (
                 <span
                   key={tech}
-                  className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-gray-300 border border-white/20"
+                  className="px-4 py-2 bg-white rounded-full text-gray-700 text-sm font-medium border border-gray-200 hover:border-gray-300 transition-colors duration-200"
                 >
                   {tech}
                 </span>
@@ -57,20 +54,20 @@ const About = () => {
             </div>
           </div>
 
-          <div className="grid gap-6">
+          <div className="grid gap-8">
             {features.map(({ icon: Icon, title, description }, index) => (
               <div
                 key={title}
-                className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"
+                className="group p-8 bg-white rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-500 hover:-translate-y-1"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg">
+                  <div className="p-3 bg-gray-900 rounded-xl group-hover:scale-110 transition-transform duration-300">
                     <Icon size={24} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-                    <p className="text-gray-400">{description}</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{description}</p>
                   </div>
                 </div>
               </div>

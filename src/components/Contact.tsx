@@ -50,45 +50,43 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-4 bg-white/5 backdrop-blur-sm">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Let's Work Together
-            </span>
+    <section id="contact" className="py-32 px-6 bg-white">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-6xl font-thin text-gray-900 mb-6 tracking-tight">
+            Let's Work Together
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
-          <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
+          <div className="w-16 h-0.5 bg-gray-900 mx-auto mb-8"></div>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
             Have a project in mind? I'd love to hear about it. Let's discuss how we can bring your ideas to life.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-20">
           {/* Contact Information */}
           <div>
-            <h3 className="text-2xl font-semibold text-white mb-8">Get in Touch</h3>
-            <div className="space-y-6">
+            <h3 className="text-3xl font-light text-gray-900 mb-12">Get in Touch</h3>
+            <div className="space-y-8">
               {contactInfo.map(({ icon: Icon, title, value, href }) => (
                 <a
                   key={title}
                   href={href}
-                  className="flex items-center space-x-4 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 group"
+                  className="flex items-center space-x-6 p-6 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg group-hover:scale-110 transition-transform duration-300">
-                    <Icon size={20} className="text-white" />
+                  <div className="p-4 bg-gray-900 rounded-xl group-hover:scale-110 transition-transform duration-300">
+                    <Icon size={24} className="text-white" />
                   </div>
                   <div>
-                    <div className="text-gray-400 text-sm">{title}</div>
-                    <div className="text-white font-medium">{value}</div>
+                    <div className="text-gray-500 text-sm font-medium">{title}</div>
+                    <div className="text-gray-900 font-semibold text-lg">{value}</div>
                   </div>
                 </a>
               ))}
             </div>
 
-            <div className="mt-8 p-6 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl border border-purple-500/20">
-              <h4 className="text-lg font-semibold text-white mb-2">Let's create something amazing together!</h4>
-              <p className="text-gray-400">
+            <div className="mt-12 p-8 bg-gray-900 rounded-2xl">
+              <h4 className="text-xl font-semibold text-white mb-4">Let's create something amazing together!</h4>
+              <p className="text-gray-300 leading-relaxed">
                 I'm always interested in new opportunities and exciting projects. 
                 Whether you have a question or just want to say hi, I'll do my best to get back to you!
               </p>
@@ -97,9 +95,9 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-8">
               <div>
-                <label htmlFor="name" className="block text-gray-300 mb-2">Name</label>
+                <label htmlFor="name" className="block text-gray-700 mb-3 font-medium">Name</label>
                 <input
                   type="text"
                   id="name"
@@ -107,13 +105,13 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-purple-400 focus:outline-none transition-colors duration-300"
+                  className="w-full px-6 py-4 bg-gray-50 border-0 rounded-xl text-gray-900 placeholder-gray-500 focus:bg-white focus:ring-2 focus:ring-gray-900 focus:outline-none transition-all duration-300"
                   placeholder="Your Name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-gray-300 mb-2">Email</label>
+                <label htmlFor="email" className="block text-gray-700 mb-3 font-medium">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -121,28 +119,28 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-purple-400 focus:outline-none transition-colors duration-300"
+                  className="w-full px-6 py-4 bg-gray-50 border-0 rounded-xl text-gray-900 placeholder-gray-500 focus:bg-white focus:ring-2 focus:ring-gray-900 focus:outline-none transition-all duration-300"
                   placeholder="your.email@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-gray-300 mb-2">Message</label>
+                <label htmlFor="message" className="block text-gray-700 mb-3 font-medium">Message</label>
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={5}
-                  className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-purple-400 focus:outline-none transition-colors duration-300 resize-none"
+                  rows={6}
+                  className="w-full px-6 py-4 bg-gray-50 border-0 rounded-xl text-gray-900 placeholder-gray-500 focus:bg-white focus:ring-2 focus:ring-gray-900 focus:outline-none transition-all duration-300 resize-none"
                   placeholder="Tell me about your project..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center justify-center space-x-2"
+                className="w-full px-8 py-4 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-3"
               >
                 <span>Send Message</span>
                 <Send size={20} />

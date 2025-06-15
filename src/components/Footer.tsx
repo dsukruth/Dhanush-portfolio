@@ -16,14 +16,14 @@ const Footer = () => {
   };
 
   return (
-    <footer className="py-12 px-4 border-t border-white/10">
-      <div className="max-w-6xl mx-auto">
+    <footer className="py-16 px-6 bg-gray-50 border-t border-gray-100">
+      <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-6 md:mb-0">
-            <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
+          <div className="mb-8 md:mb-0 text-center md:text-left">
+            <div className="text-3xl font-semibold text-gray-900 mb-3">
               Alex Johnson
             </div>
-            <p className="text-gray-400">Full Stack Developer & UI/UX Enthusiast</p>
+            <p className="text-gray-600 font-light">Full Stack Developer & UI/UX Enthusiast</p>
           </div>
 
           <div className="flex items-center space-x-6">
@@ -31,27 +31,27 @@ const Footer = () => {
               <a
                 key={label}
                 href={href}
-                className="p-2 text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110"
+                className="p-3 text-gray-600 hover:text-gray-900 transition-all duration-300 hover:scale-110 hover:bg-white rounded-full"
                 aria-label={label}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon size={20} />
+                <Icon size={24} />
               </a>
             ))}
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-          <div className="flex items-center space-x-1 mb-4 md:mb-0">
+        <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-gray-600">
+          <div className="flex items-center space-x-2 mb-4 md:mb-0">
             <span>© {currentYear} Alex Johnson. Made with</span>
-            <Heart size={14} className="text-red-400 fill-current" />
+            <Heart size={16} className="text-red-500 fill-current" />
             <span>using React & Tailwind CSS</span>
           </div>
 
           <button
             onClick={scrollToTop}
-            className="text-purple-400 hover:text-purple-300 transition-colors duration-200 hover:underline"
+            className="text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium"
           >
             Back to Top ↑
           </button>

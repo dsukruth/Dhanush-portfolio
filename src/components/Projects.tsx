@@ -39,67 +39,65 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Featured Projects
-            </span>
+    <section id="projects" className="py-32 px-6 bg-gray-50">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-6xl font-thin text-gray-900 mb-6 tracking-tight">
+            Featured Projects
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
-          <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
+          <div className="w-16 h-0.5 bg-gray-900 mx-auto mb-8"></div>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
             Here are some of my recent projects that showcase my skills and passion for creating innovative solutions.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-12">
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className="group bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-purple-500/30 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10"
+              className="group bg-white rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-700 hover:-translate-y-2"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
+                <div className="absolute top-6 right-6 flex space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <a
                     href={project.liveUrl}
-                    className="p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors duration-200"
+                    className="p-3 bg-white/90 backdrop-blur-sm rounded-full text-gray-900 hover:bg-white transition-colors duration-200"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <ExternalLink size={16} />
+                    <ExternalLink size={18} />
                   </a>
                   <a
                     href={project.githubUrl}
-                    className="p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors duration-200"
+                    className="p-3 bg-white/90 backdrop-blur-sm rounded-full text-gray-900 hover:bg-white transition-colors duration-200"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Github size={16} />
+                    <Github size={18} />
                   </a>
                 </div>
               </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
+              <div className="p-8">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4 group-hover:text-gray-700 transition-colors duration-300">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 mb-4 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 text-xs bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30"
+                      className="px-3 py-1 text-xs bg-gray-100 text-gray-700 rounded-full font-medium"
                     >
                       {tech}
                     </span>
@@ -109,16 +107,16 @@ const Projects = () => {
                 <div className="flex items-center justify-between">
                   <a
                     href={project.liveUrl}
-                    className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors duration-200 group/link"
+                    className="flex items-center space-x-2 text-gray-900 hover:text-gray-700 transition-colors duration-200 group/link font-medium"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <span>View Project</span>
-                    <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform duration-200" />
+                    <ArrowRight size={18} className="group-hover/link:translate-x-1 transition-transform duration-200" />
                   </a>
                   <a
                     href={project.githubUrl}
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
+                    className="text-gray-500 hover:text-gray-900 transition-colors duration-200"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -130,10 +128,10 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-16">
           <a
             href="https://github.com"
-            className="inline-flex items-center space-x-2 px-6 py-3 border-2 border-purple-400 text-purple-400 rounded-full font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center space-x-3 px-8 py-4 border-2 border-gray-900 text-gray-900 rounded-full font-medium hover:bg-gray-900 hover:text-white transition-all duration-300 hover:scale-105"
           >
             <span>View All Projects</span>
             <Github size={20} />
