@@ -47,11 +47,13 @@ const Hero = () => {
             </div>
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-thin mb-8 tracking-tight relative">
-            <span className="liquid-glass-text">
-              {personalInfo.name}
-            </span>
-          </h1>
+          <div className="relative mb-8">
+            <div className="glassmorphism-container inline-block p-8 rounded-3xl backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl">
+              <h1 className="text-6xl md:text-8xl font-thin tracking-tight liquid-glass-text">
+                {personalInfo.name}
+              </h1>
+            </div>
+          </div>
           
           <div className="text-2xl md:text-3xl text-gray-600 mb-6 font-light">
             <span className="border-r-2 border-gray-400 pr-1 animate-pulse">
@@ -94,82 +96,73 @@ const Hero = () => {
         </button>
       </div>
 
-      <style jsx>{`
-        .liquid-glass-text {
-          background: linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.1),
-            rgba(255, 255, 255, 0.05)
-          );
-          backdrop-filter: blur(10px);
-          -webkit-backdrop-filter: blur(10px);
-          border: 1px solid rgba(255, 255, 255, 0.18);
-          box-shadow: 
-            0 8px 32px 0 rgba(31, 38, 135, 0.37),
-            inset 0 1px 0 rgba(255, 255, 255, 0.1);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-image: linear-gradient(
-            135deg,
-            #667eea 0%,
-            #764ba2 50%,
-            #f093fb 100%
-          );
-          position: relative;
-          animation: liquidFlow 8s ease-in-out infinite;
-        }
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          .glassmorphism-container {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 
+              0 25px 45px rgba(31, 38, 135, 0.15),
+              inset 0 1px 0 rgba(255, 255, 255, 0.3),
+              0 1px 3px rgba(0, 0, 0, 0.1);
+            animation: glassFloat 6s ease-in-out infinite;
+          }
 
-        .liquid-glass-text::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.1),
-            rgba(255, 255, 255, 0.05)
-          );
-          backdrop-filter: blur(10px);
-          -webkit-backdrop-filter: blur(10px);
-          border-radius: 20px;
-          border: 1px solid rgba(255, 255, 255, 0.18);
-          z-index: -1;
-          animation: glassShimmer 6s ease-in-out infinite;
-        }
+          .liquid-glass-text {
+            background: linear-gradient(
+              135deg,
+              #667eea 0%,
+              #764ba2 25%,
+              #f093fb 50%,
+              #f5576c 75%,
+              #4facfe 100%
+            );
+            background-size: 300% 300%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: liquidFlow 8s ease-in-out infinite;
+            position: relative;
+            margin: 0;
+          }
 
-        @keyframes liquidFlow {
-          0%, 100% {
-            background-position: 0% 50%;
-            filter: hue-rotate(0deg);
+          @keyframes liquidFlow {
+            0%, 100% {
+              background-position: 0% 50%;
+              filter: hue-rotate(0deg) brightness(1.1);
+            }
+            25% {
+              background-position: 100% 50%;
+              filter: hue-rotate(90deg) brightness(1.2);
+            }
+            50% {
+              background-position: 100% 100%;
+              filter: hue-rotate(180deg) brightness(1.3);
+            }
+            75% {
+              background-position: 0% 100%;
+              filter: hue-rotate(270deg) brightness(1.2);
+            }
           }
-          25% {
-            background-position: 100% 50%;
-            filter: hue-rotate(90deg);
-          }
-          50% {
-            background-position: 100% 100%;
-            filter: hue-rotate(180deg);
-          }
-          75% {
-            background-position: 0% 100%;
-            filter: hue-rotate(270deg);
-          }
-        }
 
-        @keyframes glassShimmer {
-          0%, 100% {
-            opacity: 0.1;
-            transform: translateX(-10px);
+          @keyframes glassFloat {
+            0%, 100% {
+              transform: translateY(0px) rotate(0deg);
+              box-shadow: 
+                0 25px 45px rgba(31, 38, 135, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            }
+            50% {
+              transform: translateY(-10px) rotate(0.5deg);
+              box-shadow: 
+                0 35px 55px rgba(31, 38, 135, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            }
           }
-          50% {
-            opacity: 0.2;
-            transform: translateX(10px);
-          }
-        }
-      `}</style>
+        `
+      }} />
     </section>
   );
 };
