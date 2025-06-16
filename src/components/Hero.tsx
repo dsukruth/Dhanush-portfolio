@@ -47,13 +47,9 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Liquid Glass Name Effect */}
-          <div className="relative mb-8">
-            <h1 className="text-6xl md:text-8xl font-thin tracking-tight relative z-10 liquid-glass-text">
-              {personalInfo.name}
-            </h1>
-            <div className="absolute inset-0 liquid-glass-bg"></div>
-          </div>
+          <h1 className="text-6xl md:text-8xl font-thin text-gray-900 mb-8 tracking-tight">
+            {personalInfo.name}
+          </h1>
           
           <div className="text-2xl md:text-3xl text-gray-600 mb-6 font-light">
             <span className="border-r-2 border-gray-400 pr-1 animate-pulse">
@@ -95,62 +91,6 @@ const Hero = () => {
           <ChevronDown size={32} />
         </button>
       </div>
-
-      <style jsx>{`
-        .liquid-glass-text {
-          background: linear-gradient(135deg, 
-            rgba(255, 255, 255, 0.8) 0%,
-            rgba(255, 255, 255, 0.4) 25%,
-            rgba(255, 255, 255, 0.1) 50%,
-            rgba(255, 255, 255, 0.4) 75%,
-            rgba(255, 255, 255, 0.8) 100%
-          );
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
-          filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.1));
-          animation: liquid-shimmer 3s ease-in-out infinite;
-        }
-
-        .liquid-glass-bg {
-          background: linear-gradient(135deg,
-            rgba(255, 255, 255, 0.25) 0%,
-            rgba(255, 255, 255, 0.1) 25%,
-            rgba(255, 255, 255, 0.05) 50%,
-            rgba(255, 255, 255, 0.1) 75%,
-            rgba(255, 255, 255, 0.25) 100%
-          );
-          backdrop-filter: blur(20px);
-          border-radius: 20px;
-          border: 1px solid rgba(255, 255, 255, 0.2);
-          box-shadow: 
-            0 8px 32px 0 rgba(31, 38, 135, 0.15),
-            0 0 0 1px rgba(255, 255, 255, 0.05),
-            inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
-          animation: glass-float 4s ease-in-out infinite;
-        }
-
-        @keyframes liquid-shimmer {
-          0%, 100% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-        }
-
-        @keyframes glass-float {
-          0%, 100% {
-            transform: translateY(0px) scale(1);
-            opacity: 0.7;
-          }
-          50% {
-            transform: translateY(-5px) scale(1.02);
-            opacity: 0.9;
-          }
-        }
-      `}</style>
     </section>
   );
 };
