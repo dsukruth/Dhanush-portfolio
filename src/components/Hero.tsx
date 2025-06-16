@@ -47,8 +47,10 @@ const Hero = () => {
             </div>
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-thin text-gray-900 mb-8 tracking-tight">
-            {personalInfo.name}
+          <h1 className="text-6xl md:text-8xl font-thin mb-8 tracking-tight relative">
+            <span className="liquid-glass-text">
+              {personalInfo.name}
+            </span>
           </h1>
           
           <div className="text-2xl md:text-3xl text-gray-600 mb-6 font-light">
@@ -91,6 +93,83 @@ const Hero = () => {
           <ChevronDown size={32} />
         </button>
       </div>
+
+      <style jsx>{`
+        .liquid-glass-text {
+          background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.05)
+          );
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.18);
+          box-shadow: 
+            0 8px 32px 0 rgba(31, 38, 135, 0.37),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-image: linear-gradient(
+            135deg,
+            #667eea 0%,
+            #764ba2 50%,
+            #f093fb 100%
+          );
+          position: relative;
+          animation: liquidFlow 8s ease-in-out infinite;
+        }
+
+        .liquid-glass-text::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.05)
+          );
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          border-radius: 20px;
+          border: 1px solid rgba(255, 255, 255, 0.18);
+          z-index: -1;
+          animation: glassShimmer 6s ease-in-out infinite;
+        }
+
+        @keyframes liquidFlow {
+          0%, 100% {
+            background-position: 0% 50%;
+            filter: hue-rotate(0deg);
+          }
+          25% {
+            background-position: 100% 50%;
+            filter: hue-rotate(90deg);
+          }
+          50% {
+            background-position: 100% 100%;
+            filter: hue-rotate(180deg);
+          }
+          75% {
+            background-position: 0% 100%;
+            filter: hue-rotate(270deg);
+          }
+        }
+
+        @keyframes glassShimmer {
+          0%, 100% {
+            opacity: 0.1;
+            transform: translateX(-10px);
+          }
+          50% {
+            opacity: 0.2;
+            transform: translateX(10px);
+          }
+        }
+      `}</style>
     </section>
   );
 };
