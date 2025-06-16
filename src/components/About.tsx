@@ -1,24 +1,13 @@
 
 import React from 'react';
-import { Code, Palette, Zap } from 'lucide-react';
+import { GraduationCap, Award, Users } from 'lucide-react';
+import { personalInfo, education, leadership } from '../data/portfolioData';
 
 const About = () => {
-  const features = [
-    {
-      icon: Code,
-      title: "Clean Code",
-      description: "Writing maintainable, scalable, and well-documented code following best practices."
-    },
-    {
-      icon: Palette,
-      title: "UI/UX Design",
-      description: "Creating beautiful, intuitive interfaces with attention to user experience and accessibility."
-    },
-    {
-      icon: Zap,
-      title: "Performance",
-      description: "Optimizing applications for speed, efficiency, and seamless user interactions."
-    }
+  const stats = [
+    { number: personalInfo.yearsExperience, label: 'Years Experience' },
+    { number: personalInfo.projectsCompleted, label: 'Projects Completed' },
+    { number: personalInfo.volunteersLed, label: 'Volunteers Led' }
   ];
 
   return (
@@ -31,47 +20,88 @@ const About = () => {
           <div className="w-16 h-0.5 bg-gray-900 mx-auto"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div className="space-y-8">
             <p className="text-xl text-gray-600 leading-relaxed font-light">
-              I'm a passionate full-stack developer with over 5 years of experience creating 
-              digital solutions that make a difference. I specialize in modern web technologies 
-              and love turning complex problems into simple, beautiful designs.
+              {personalInfo.bio}
             </p>
-            <p className="text-xl text-gray-600 leading-relaxed font-light">
-              When I'm not coding, you'll find me exploring new technologies, contributing to 
-              open-source projects, or sharing knowledge with the developer community.
-            </p>
-            <div className="flex flex-wrap gap-3 pt-6">
-              {['JavaScript', 'TypeScript', 'React', 'Node.js', 'Python'].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-4 py-2 bg-white rounded-full text-gray-700 text-sm font-medium border border-gray-200 hover:border-gray-300 transition-colors duration-200"
-                >
-                  {tech}
-                </span>
+            
+            {/* Education */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-semibold text-gray-900 flex items-center gap-3">
+                <GraduationCap size={28} />
+                Education
+              </h3>
+              {education.map((edu, index) => (
+                <div key={index} className="p-6 bg-white rounded-xl border border-gray-200">
+                  <h4 className="font-semibold text-gray-900 mb-2">{edu.degree}</h4>
+                  <p className="text-gray-700 mb-2">{edu.institution}</p>
+                  <div className="flex justify-between text-sm text-gray-500 mb-3">
+                    <span>{edu.location}</span>
+                    <span>{edu.period}</span>
+                  </div>
+                  <ul className="space-y-1">
+                    {edu.achievements.map((achievement, i) => (
+                      <li key={i} className="text-sm text-gray-600">• {achievement}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            {/* Leadership */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-semibold text-gray-900 flex items-center gap-3">
+                <Users size={28} />
+                Leadership
+              </h3>
+              {leadership.map((lead, index) => (
+                <div key={index} className="p-6 bg-white rounded-xl border border-gray-200">
+                  <h4 className="font-semibold text-gray-900 mb-2">{lead.title}</h4>
+                  <p className="text-gray-700 mb-2">{lead.organization}</p>
+                  <div className="flex justify-between text-sm text-gray-500 mb-3">
+                    <span>{lead.location}</span>
+                    <span>{lead.period}</span>
+                  </div>
+                  <ul className="space-y-1">
+                    {lead.achievements.map((achievement, i) => (
+                      <li key={i} className="text-sm text-gray-600">• {achievement}</li>
+                    ))}
+                  </ul>
+                </div>
               ))}
             </div>
           </div>
 
-          <div className="grid gap-8">
-            {features.map(({ icon: Icon, title, description }, index) => (
-              <div
-                key={title}
-                className="group p-8 bg-white rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-500 hover:-translate-y-1"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-gray-900 rounded-xl group-hover:scale-110 transition-transform duration-300">
-                    <Icon size={24} className="text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{description}</p>
-                  </div>
+          <div className="space-y-8">
+            {/* Stats */}
+            <div className="grid grid-cols-1 gap-6">
+              {stats.map((stat, index) => (
+                <div
+                  key={stat.label}
+                  className="text-center p-8 bg-white rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="text-4xl font-thin text-gray-900 mb-2">{stat.number}</div>
+                  <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* Key Highlights */}
+            <div className="p-8 bg-gray-900 rounded-2xl text-white">
+              <h4 className="text-xl font-semibold mb-6 flex items-center gap-3">
+                <Award size={24} />
+                Key Achievements
+              </h4>
+              <ul className="space-y-3 text-gray-300">
+                <li>• AI in Food Insecurity Case Competition Winner</li>
+                <li>• AI in Business Case Competition Runner Up</li>
+                <li>• Led 800+ volunteers in educational initiatives</li>
+                <li>• 30% improvement in procurement cycle time</li>
+                <li>• 20% increase in satellite system reliability</li>
+                <li>• CSPO Certified Product Owner</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

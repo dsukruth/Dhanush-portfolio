@@ -1,7 +1,8 @@
 
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Linkedin } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
+import { personalInfo } from '../data/portfolioData';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,7 +14,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
     toast({
       title: "Message sent!",
       description: "Thank you for reaching out. I'll get back to you soon.",
@@ -32,33 +32,39 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'alex.johnson@email.com',
-      href: 'mailto:alex.johnson@email.com'
+      value: personalInfo.email,
+      href: `mailto:${personalInfo.email}`
     },
     {
       icon: Phone,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: personalInfo.phone,
+      href: `tel:${personalInfo.phone}`
+    },
+    {
+      icon: Linkedin,
+      title: 'LinkedIn',
+      value: personalInfo.linkedin,
+      href: `https://${personalInfo.linkedin}`
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'San Francisco, CA',
+      value: personalInfo.location,
       href: '#'
     }
   ];
 
   return (
-    <section id="contact" className="py-32 px-6 bg-white">
+    <section id="contact" className="py-32 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-thin text-gray-900 mb-6 tracking-tight">
-            Let's Work Together
+            Let's Connect
           </h2>
           <div className="w-16 h-0.5 bg-gray-900 mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
-            Have a project in mind? I'd love to hear about it. Let's discuss how we can bring your ideas to life.
+            I'm always interested in discussing new opportunities, innovative projects, or potential collaborations. Let's create something amazing together.
           </p>
         </div>
 
@@ -66,12 +72,14 @@ const Contact = () => {
           {/* Contact Information */}
           <div>
             <h3 className="text-3xl font-light text-gray-900 mb-12">Get in Touch</h3>
-            <div className="space-y-8">
+            <div className="space-y-6">
               {contactInfo.map(({ icon: Icon, title, value, href }) => (
                 <a
                   key={title}
                   href={href}
-                  className="flex items-center space-x-6 p-6 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-all duration-300 hover:scale-105 group"
+                  className="flex items-center space-x-6 p-6 bg-white rounded-2xl hover:bg-gray-100 transition-all duration-300 hover:scale-105 group"
+                  target={href.startsWith('http') ? '_blank' : '_self'}
+                  rel={href.startsWith('http') ? 'noopener noreferrer' : ''}
                 >
                   <div className="p-4 bg-gray-900 rounded-xl group-hover:scale-110 transition-transform duration-300">
                     <Icon size={24} className="text-white" />
@@ -85,11 +93,16 @@ const Contact = () => {
             </div>
 
             <div className="mt-12 p-8 bg-gray-900 rounded-2xl">
-              <h4 className="text-xl font-semibold text-white mb-4">Let's create something amazing together!</h4>
-              <p className="text-gray-300 leading-relaxed">
-                I'm always interested in new opportunities and exciting projects. 
-                Whether you have a question or just want to say hi, I'll do my best to get back to you!
+              <h4 className="text-xl font-semibold text-white mb-4">Available for Opportunities</h4>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                Currently seeking full-time opportunities in:
               </p>
+              <ul className="text-gray-300 space-y-2">
+                <li>• Product Management</li>
+                <li>• AI/ML Engineering</li>
+                <li>• Software Engineering</li>
+                <li>• Data Science</li>
+              </ul>
             </div>
           </div>
 
@@ -105,7 +118,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-6 py-4 bg-gray-50 border-0 rounded-xl text-gray-900 placeholder-gray-500 focus:bg-white focus:ring-2 focus:ring-gray-900 focus:outline-none transition-all duration-300"
+                  className="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-500 focus:bg-gray-50 focus:ring-2 focus:ring-gray-900 focus:outline-none transition-all duration-300"
                   placeholder="Your Name"
                 />
               </div>
@@ -119,7 +132,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-6 py-4 bg-gray-50 border-0 rounded-xl text-gray-900 placeholder-gray-500 focus:bg-white focus:ring-2 focus:ring-gray-900 focus:outline-none transition-all duration-300"
+                  className="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-500 focus:bg-gray-50 focus:ring-2 focus:ring-gray-900 focus:outline-none transition-all duration-300"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -133,8 +146,8 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-6 py-4 bg-gray-50 border-0 rounded-xl text-gray-900 placeholder-gray-500 focus:bg-white focus:ring-2 focus:ring-gray-900 focus:outline-none transition-all duration-300 resize-none"
-                  placeholder="Tell me about your project..."
+                  className="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-500 focus:bg-gray-50 focus:ring-2 focus:ring-gray-900 focus:outline-none transition-all duration-300 resize-none"
+                  placeholder="Tell me about your project or opportunity..."
                 />
               </div>
 

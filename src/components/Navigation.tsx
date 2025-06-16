@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { personalInfo } from '../data/portfolioData';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,12 +30,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="text-2xl font-semibold text-gray-900">
-            Alex Johnson
+            {personalInfo.name.split(' ')[0]}
           </div>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-12">
-            {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
+            {['Home', 'About', 'Skills', 'Experience', 'Projects', 'Contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
@@ -59,7 +60,7 @@ const Navigation = () => {
         {isOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-xl border-b border-gray-100 animate-fade-in">
             <div className="px-6 py-4 space-y-4">
-              {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
+              {['Home', 'About', 'Skills', 'Experience', 'Projects', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}

@@ -1,10 +1,11 @@
 
 import React, { useEffect, useState } from 'react';
-import { ChevronDown, ArrowRight } from 'lucide-react';
+import { ChevronDown, ArrowRight, MapPin, Mail, Linkedin } from 'lucide-react';
+import { personalInfo } from '../data/portfolioData';
 
 const Hero = () => {
   const [text, setText] = useState('');
-  const fullText = 'Full Stack Developer';
+  const fullText = personalInfo.title;
   
   useEffect(() => {
     let index = 0;
@@ -25,21 +26,43 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-gray-50 to-white pt-16">
-      <div className="text-center z-10 max-w-5xl mx-auto px-6">
+      <div className="text-center z-10 max-w-6xl mx-auto px-6">
         <div className="animate-fade-in">
+          {/* Contact Info Bar */}
+          <div className="flex flex-wrap justify-center items-center gap-6 mb-12 text-sm text-gray-600">
+            <div className="flex items-center gap-2">
+              <span>{personalInfo.phone}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Mail size={16} />
+              <span>{personalInfo.email}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Linkedin size={16} />
+              <span>{personalInfo.linkedin}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <MapPin size={16} />
+              <span>{personalInfo.location}</span>
+            </div>
+          </div>
+
           <h1 className="text-6xl md:text-8xl font-thin text-gray-900 mb-8 tracking-tight">
-            Hi, I'm Alex
+            {personalInfo.name}
           </h1>
           
-          <div className="text-2xl md:text-3xl text-gray-600 mb-12 font-light">
+          <div className="text-2xl md:text-3xl text-gray-600 mb-6 font-light">
             <span className="border-r-2 border-gray-400 pr-1 animate-pulse">
               {text}
             </span>
           </div>
+
+          <div className="text-lg md:text-xl text-gray-500 mb-12 font-medium">
+            {personalInfo.subtitle}
+          </div>
           
-          <p className="text-lg md:text-xl text-gray-500 mb-16 max-w-3xl mx-auto leading-relaxed font-light">
-            I craft beautiful, responsive web applications with modern technologies. 
-            Passionate about creating seamless user experiences and scalable solutions.
+          <p className="text-lg md:text-xl text-gray-500 mb-16 max-w-4xl mx-auto leading-relaxed font-light">
+            {personalInfo.bio}
           </p>
 
           {/* CTA Buttons */}
