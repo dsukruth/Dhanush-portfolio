@@ -4,6 +4,10 @@ import { ExternalLink, Github, ArrowRight, Calendar } from 'lucide-react';
 import { projects } from '../data/portfolioData';
 
 const Projects = () => {
+  const handleViewAllProjects = () => {
+    window.open('https://github.com/dsukruth', '_blank');
+  };
+
   return (
     <section id="projects" className="py-32 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -80,7 +84,10 @@ const Projects = () => {
         </div>
 
         <div className="text-center mt-16">
-          <button className="inline-flex items-center space-x-3 px-8 py-4 border-2 border-gray-900 text-gray-900 rounded-full font-medium hover:bg-gray-900 hover:text-white transition-all duration-300 hover:scale-105">
+          <button 
+            onClick={handleViewAllProjects}
+            className="inline-flex items-center space-x-3 px-8 py-4 border-2 border-gray-900 text-gray-900 rounded-full font-medium hover:bg-gray-900 hover:text-white transition-all duration-300 hover:scale-105"
+          >
             <span>View All Projects</span>
             <Github size={20} />
           </button>
