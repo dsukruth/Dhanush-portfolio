@@ -6,7 +6,7 @@ export const personalInfo = {
   location: "Los Angeles, CA",
   linkedin: "linkedin.com/in/dhanush-p-sukruth",
   title: "Software Engineer & Product Manager",
-  subtitle: "AI Enthusiast | Data Science | Product Strategy",
+  subtitle: "Product Management|AI Enthusiast | Data| Software Engineer",
   bio: "Experienced Software Engineer with expertise in AI solutions, satellite systems testing, and product management. Currently pursuing MS in Information Systems at University of Maryland with a focus on AI applications in business.",
   yearsExperience: "3+",
   projectsCompleted: "15+",
