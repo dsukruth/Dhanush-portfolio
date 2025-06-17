@@ -39,7 +39,7 @@ const Navigation = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200 relative group"
+                className="liquid-glass-button text-sm font-medium text-gray-700 transition-all duration-300 relative group px-3 py-2 rounded-full"
               >
                 {item}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 group-hover:w-full transition-all duration-300"></span>
@@ -49,7 +49,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-700 hover:text-gray-900"
+            className="liquid-glass-button md:hidden text-gray-700 p-2 rounded-full transition-all duration-300"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -64,7 +64,7 @@ const Navigation = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className="block w-full text-left text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200 py-2"
+                  className="liquid-glass-button block w-full text-left text-sm font-medium text-gray-700 transition-all duration-300 py-2 px-3 rounded-lg"
                 >
                   {item}
                 </button>
@@ -73,6 +73,65 @@ const Navigation = () => {
           </div>
         )}
       </div>
+
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          .liquid-glass-button {
+            position: relative;
+            overflow: hidden;
+          }
+
+          .liquid-glass-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              90deg,
+              transparent,
+              rgba(255, 255, 255, 0.3),
+              rgba(255, 255, 255, 0.1),
+              transparent
+            );
+            transition: left 0.6s ease;
+            z-index: 1;
+          }
+
+          .liquid-glass-button::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+          }
+
+          .liquid-glass-button:hover::before {
+            left: 100%;
+          }
+
+          .liquid-glass-button:hover::after {
+            opacity: 1;
+          }
+
+          .liquid-glass-button:active {
+            transform: scale(0.98);
+            box-shadow: 
+              inset 0 4px 8px rgba(0, 0, 0, 0.1),
+              0 4px 12px rgba(31, 38, 135, 0.2);
+          }
+
+          .liquid-glass-button > * {
+            position: relative;
+            z-index: 2;
+          }
+        `
+      }} />
     </nav>
   );
 };

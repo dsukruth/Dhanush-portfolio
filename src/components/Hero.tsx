@@ -48,7 +48,7 @@ const Hero = () => {
           </div>
 
           <div className="relative mb-8">
-            <div className="glassmorphism-container inline-block p-8 rounded-3xl backdrop-blur-lg bg-white/5 border border-white/10 shadow-2xl">
+            <div className="glassmorphism-container inline-block p-8 rounded-3xl backdrop-blur-lg bg-white/3 border border-white/20 shadow-2xl">
               <h1 className="text-6xl md:text-8xl font-thin tracking-tight liquid-glass-text">
                 {personalInfo.name}
               </h1>
@@ -73,14 +73,14 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-20">
             <button
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-              className="group px-8 py-4 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2"
+              className="group liquid-glass-button px-8 py-4 bg-gray-900 text-white rounded-full font-medium transition-all duration-300 flex items-center justify-center space-x-2"
             >
               <span>View My Work</span>
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
             </button>
             <button
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-4 border-2 border-gray-900 text-gray-900 rounded-full font-medium hover:bg-gray-900 hover:text-white transition-all duration-300 hover:scale-105"
+              className="liquid-glass-button px-8 py-4 border-2 border-gray-900 text-gray-900 rounded-full font-medium transition-all duration-300"
             >
               Get In Touch
             </button>
@@ -90,7 +90,7 @@ const Hero = () => {
         {/* Scroll Indicator */}
         <button
           onClick={scrollToAbout}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 hover:text-gray-600 transition-colors duration-300 animate-bounce-subtle"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 hover:text-gray-600 transition-colors duration-300 animate-bounce-subtle liquid-glass-button p-2 rounded-full"
         >
           <ChevronDown size={32} />
         </button>
@@ -99,7 +99,7 @@ const Hero = () => {
       <style dangerouslySetInnerHTML={{
         __html: `
           .glassmorphism-container {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.15);
@@ -126,6 +126,61 @@ const Hero = () => {
             animation: liquidFlow 8s ease-in-out infinite;
             position: relative;
             margin: 0;
+          }
+
+          .liquid-glass-button {
+            position: relative;
+            overflow: hidden;
+          }
+
+          .liquid-glass-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              90deg,
+              transparent,
+              rgba(255, 255, 255, 0.3),
+              rgba(255, 255, 255, 0.1),
+              transparent
+            );
+            transition: left 0.6s ease;
+            z-index: 1;
+          }
+
+          .liquid-glass-button::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+          }
+
+          .liquid-glass-button:hover::before {
+            left: 100%;
+          }
+
+          .liquid-glass-button:hover::after {
+            opacity: 1;
+          }
+
+          .liquid-glass-button:active {
+            transform: scale(0.98);
+            box-shadow: 
+              inset 0 4px 8px rgba(0, 0, 0, 0.1),
+              0 4px 12px rgba(31, 38, 135, 0.2);
+          }
+
+          .liquid-glass-button > * {
+            position: relative;
+            z-index: 2;
           }
 
           @keyframes liquidFlow {

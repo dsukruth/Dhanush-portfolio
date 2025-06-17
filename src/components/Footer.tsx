@@ -33,7 +33,7 @@ const Footer = () => {
               <a
                 key={label}
                 href={href}
-                className="p-3 text-gray-600 hover:text-gray-900 transition-all duration-300 hover:scale-110 hover:bg-gray-50 rounded-full"
+                className="liquid-glass-button p-3 text-gray-600 transition-all duration-300 rounded-full"
                 aria-label={label}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -53,12 +53,71 @@ const Footer = () => {
 
           <button
             onClick={scrollToTop}
-            className="text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium"
+            className="liquid-glass-button text-gray-600 transition-all duration-300 font-medium px-4 py-2 rounded-full"
           >
             Back to Top ↑
           </button>
         </div>
       </div>
+
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          .liquid-glass-button {
+            position: relative;
+            overflow: hidden;
+          }
+
+          .liquid-glass-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              90deg,
+              transparent,
+              rgba(255, 255, 255, 0.3),
+              rgba(255, 255, 255, 0.1),
+              transparent
+            );
+            transition: left 0.6s ease;
+            z-index: 1;
+          }
+
+          .liquid-glass-button::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+          }
+
+          .liquid-glass-button:hover::before {
+            left: 100%;
+          }
+
+          .liquid-glass-button:hover::after {
+            opacity: 1;
+          }
+
+          .liquid-glass-button:active {
+            transform: scale(0.98);
+            box-shadow: 
+              inset 0 4px 8px rgba(0, 0, 0, 0.1),
+              0 4px 12px rgba(31, 38, 135, 0.2);
+          }
+
+          .liquid-glass-button > * {
+            position: relative;
+            z-index: 2;
+          }
+        `
+      }} />
     </footer>
   );
 };
