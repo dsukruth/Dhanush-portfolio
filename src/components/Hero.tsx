@@ -48,7 +48,7 @@ const Hero = () => {
           </div>
 
           <div className="relative mb-8">
-            <div className="glassmorphism-container inline-block p-8 rounded-3xl backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl">
+            <div className="glassmorphism-container inline-block p-8 rounded-3xl backdrop-blur-lg bg-white/5 border border-white/10 shadow-2xl">
               <h1 className="text-6xl md:text-8xl font-thin tracking-tight liquid-glass-text">
                 {personalInfo.name}
               </h1>
@@ -99,14 +99,14 @@ const Hero = () => {
       <style dangerouslySetInnerHTML={{
         __html: `
           .glassmorphism-container {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             box-shadow: 
-              0 25px 45px rgba(31, 38, 135, 0.15),
-              inset 0 1px 0 rgba(255, 255, 255, 0.3),
-              0 1px 3px rgba(0, 0, 0, 0.1);
+              0 25px 45px rgba(31, 38, 135, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.2),
+              0 1px 3px rgba(0, 0, 0, 0.05);
             animation: glassFloat 6s ease-in-out infinite;
           }
 
@@ -151,14 +151,14 @@ const Hero = () => {
             0%, 100% {
               transform: translateY(0px) rotate(0deg);
               box-shadow: 
-                0 25px 45px rgba(31, 38, 135, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+                0 25px 45px rgba(31, 38, 135, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
             }
             50% {
               transform: translateY(-10px) rotate(0.5deg);
               box-shadow: 
-                0 35px 55px rgba(31, 38, 135, 0.2),
-                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+                0 35px 55px rgba(31, 38, 135, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.25);
             }
           }
         `
