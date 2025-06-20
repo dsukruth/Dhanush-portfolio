@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Linkedin } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
 import { personalInfo } from '../data/portfolioData';
-import LiquidGlass from './ui/liquid-glass';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -75,114 +74,153 @@ const Contact = () => {
             <h3 className="text-3xl font-light text-gray-900 mb-12">Get in Touch</h3>
             <div className="space-y-6">
               {contactInfo.map(({ icon: Icon, title, value, href }) => (
-                <LiquidGlass
+                <a
                   key={title}
-                  variant="regular"
-                  size="medium"
-                  onClick={href !== '#' ? () => window.open(href, href.startsWith('http') ? '_blank' : '_self') : undefined}
-                  className={`flex items-center space-x-6 p-6 rounded-2xl transition-all duration-300 ${
-                    href !== '#' ? 'cursor-pointer' : ''
-                  }`}
+                  href={href}
+                  className="flex items-center space-x-6 p-6 bg-white rounded-2xl hover:bg-gray-100 transition-all duration-300 hover:scale-105 group"
+                  target={href.startsWith('http') ? '_blank' : '_self'}
+                  rel={href.startsWith('http') ? 'noopener noreferrer' : ''}
                 >
-                  <div className="p-4 bg-gray-900 rounded-xl transition-transform duration-300 group-hover:scale-110 relative z-10">
+                  <div className="p-4 bg-gray-900 rounded-xl group-hover:scale-110 transition-transform duration-300">
                     <Icon size={24} className="text-white" />
                   </div>
-                  <div className="relative z-10">
+                  <div>
                     <div className="text-gray-500 text-sm font-medium">{title}</div>
                     <div className="text-gray-900 font-semibold text-lg">{value}</div>
                   </div>
-                </LiquidGlass>
+                </a>
               ))}
             </div>
 
-            <LiquidGlass
-              variant="regular"
-              size="large"
-              tintColor="#1f2937"
-              className="mt-12 p-8 rounded-2xl"
-            >
-              <div className="relative z-10">
-                <h4 className="text-xl font-semibold text-white mb-4">Available for Opportunities</h4>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  Currently seeking full-time opportunities in:
-                </p>
-                <ul className="text-gray-300 space-y-2">
-                  <li>• Product Management</li>
-                  <li>• AI/ML Engineering</li>
-                  <li>• Software Engineering</li>
-                  <li>• Data Science</li>
-                </ul>
-              </div>
-            </LiquidGlass>
+            <div className="mt-12 p-8 bg-gray-900 rounded-2xl">
+              <h4 className="text-xl font-semibold text-white mb-4">Available for Opportunities</h4>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                Currently seeking full-time opportunities in:
+              </p>
+              <ul className="text-gray-300 space-y-2">
+                <li>• Product Management</li>
+                <li>• AI/ML Engineering</li>
+                <li>• Software Engineering</li>
+                <li>• Data Science</li>
+              </ul>
+            </div>
           </div>
 
           {/* Contact Form */}
           <div>
-            <LiquidGlass
-              variant="regular"
-              size="large"
-              className="p-8 rounded-2xl"
-            >
-              <form onSubmit={handleSubmit} className="space-y-8 relative z-10">
-                <div>
-                  <label htmlFor="name" className="block text-gray-700 mb-3 font-medium">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-6 py-4 bg-white/50 border border-gray-200/50 rounded-xl text-gray-900 placeholder-gray-500 focus:bg-white/70 focus:ring-2 focus:ring-gray-900/50 focus:outline-none transition-all duration-300 backdrop-blur-sm"
-                    placeholder="Your Name"
-                  />
-                </div>
+            <form onSubmit={handleSubmit} className="space-y-8">
+              <div>
+                <label htmlFor="name" className="block text-gray-700 mb-3 font-medium">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-500 focus:bg-gray-50 focus:ring-2 focus:ring-gray-900 focus:outline-none transition-all duration-300"
+                  placeholder="Your Name"
+                />
+              </div>
 
-                <div>
-                  <label htmlFor="email" className="block text-gray-700 mb-3 font-medium">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-6 py-4 bg-white/50 border border-gray-200/50 rounded-xl text-gray-900 placeholder-gray-500 focus:bg-white/70 focus:ring-2 focus:ring-gray-900/50 focus:outline-none transition-all duration-300 backdrop-blur-sm"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
+              <div>
+                <label htmlFor="email" className="block text-gray-700 mb-3 font-medium">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-500 focus:bg-gray-50 focus:ring-2 focus:ring-gray-900 focus:outline-none transition-all duration-300"
+                  placeholder="your.email@example.com"
+                />
+              </div>
 
-                <div>
-                  <label htmlFor="message" className="block text-gray-700 mb-3 font-medium">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    className="w-full px-6 py-4 bg-white/50 border border-gray-200/50 rounded-xl text-gray-900 placeholder-gray-500 focus:bg-white/70 focus:ring-2 focus:ring-gray-900/50 focus:outline-none transition-all duration-300 resize-none backdrop-blur-sm"
-                    placeholder="Tell me about your project or opportunity..."
-                  />
-                </div>
+              <div>
+                <label htmlFor="message" className="block text-gray-700 mb-3 font-medium">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={6}
+                  className="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-500 focus:bg-gray-50 focus:ring-2 focus:ring-gray-900 focus:outline-none transition-all duration-300 resize-none"
+                  placeholder="Tell me about your project or opportunity..."
+                />
+              </div>
 
-                <LiquidGlass
-                  variant="regular"
-                  size="medium"
-                  tintColor="#1f2937"
-                  onClick={handleSubmit}
-                  className="w-full px-8 py-4 rounded-xl cursor-pointer"
-                >
-                  <div className="flex items-center justify-center space-x-3 text-white font-semibold relative z-10">
-                    <span>Send Message</span>
-                    <Send size={20} />
-                  </div>
-                </LiquidGlass>
-              </form>
-            </LiquidGlass>
+              <button
+                type="submit"
+                className="liquid-glass-button w-full px-8 py-4 bg-gray-900 text-white rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-3"
+              >
+                <span>Send Message</span>
+                <Send size={20} />
+              </button>
+            </form>
           </div>
         </div>
       </div>
+
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          .liquid-glass-button {
+            position: relative;
+            overflow: hidden;
+          }
+
+          .liquid-glass-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              90deg,
+              transparent,
+              rgba(255, 255, 255, 0.3),
+              rgba(255, 255, 255, 0.1),
+              transparent
+            );
+            transition: left 0.6s ease;
+            z-index: 1;
+          }
+
+          .liquid-glass-button::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+          }
+
+          .liquid-glass-button:hover::before {
+            left: 100%;
+          }
+
+          .liquid-glass-button:hover::after {
+            opacity: 1;
+          }
+
+          .liquid-glass-button:active {
+            transform: scale(0.98);
+            box-shadow: 
+              inset 0 4px 8px rgba(0, 0, 0, 0.1),
+              0 4px 12px rgba(31, 38, 135, 0.2);
+          }
+
+          .liquid-glass-button > * {
+            position: relative;
+            z-index: 2;
+          }
+        `
+      }} />
     </section>
   );
 };
