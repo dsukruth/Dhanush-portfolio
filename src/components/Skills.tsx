@@ -1,6 +1,5 @@
-
 import React, { useEffect, useState } from 'react';
-import { Code, Database, Wrench, Target } from 'lucide-react';
+import { Code, Database, Wrench, Target, Brain, Cloud } from 'lucide-react';
 import { technicalSkills } from '../data/portfolioData';
 
 const Skills = () => {
@@ -14,22 +13,34 @@ const Skills = () => {
       color: 'bg-blue-600'
     },
     {
-      icon: Wrench,
-      title: 'Tools & Platforms',
-      skills: technicalSkills.tools,
+      icon: Brain,
+      title: 'AI/ML Frameworks',
+      skills: technicalSkills.aiMlFrameworks,
       color: 'bg-green-600'
     },
     {
-      icon: Database,
-      title: 'Databases',
-      skills: technicalSkills.databases,
+      icon: Cloud,
+      title: 'Cloud & DevOps',
+      skills: technicalSkills.cloudDevOps,
       color: 'bg-purple-600'
+    },
+    {
+      icon: Database,
+      title: 'Data & Analytics',
+      skills: technicalSkills.dataAnalytics,
+      color: 'bg-orange-600'
+    },
+    {
+      icon: Wrench,
+      title: 'Blockchain',
+      skills: technicalSkills.blockchain,
+      color: 'bg-red-600'
     },
     {
       icon: Target,
       title: 'Project Management',
       skills: technicalSkills.projectManagement,
-      color: 'bg-orange-600'
+      color: 'bg-indigo-600'
     }
   ];
 
