@@ -1,3 +1,4 @@
+
 export const personalInfo = {
   name: "Dhanush P Sukruth",
   email: "dsukruth@umd.edu",
@@ -6,7 +7,7 @@ export const personalInfo = {
   linkedin: "linkedin.com/in/dhanush-p-sukruth",
   title: "Software Engineer & Product Manager",
   subtitle: "Product Management|AI Enthusiast | Data| Software Engineer",
-  bio: "As a Software Test Engineer at ISRO - Indian Space Research Organization, I have been working on upgrading critical software tools for the Chandrayaan-3 mission. I have successfully reduced the time required for software testing of the spacecraft by nearly 75% using tools such as Python, Ansible, and Shell Script. I am also a co-founder of 16bits, where I gained valuable experience in software development and project management. I am currently pursuing my Master's degree in Information Systems at the University of Maryland - Robert H. Smith School of Business, with a focus on software development and quality assurance. I am passionate about leveraging technology to solve complex problems and improve efficiency.",
+  bio: "Experienced Software Engineer with expertise in AI solutions, satellite systems testing, and product management. Currently pursuing MS in Information Systems at University of Maryland with a focus on AI applications in business.",
   yearsExperience: "3+",
   projectsCompleted: "15+",
   volunteersLed: "800+"
