@@ -2,7 +2,6 @@
 export const personalInfo = {
   name: "Dhanush P Sukruth",
   email: "dsukruth@umd.edu",
-  phone: "+1 (227) 205-8830",
   location: "Washington D.C., USA",
   linkedin: "linkedin.com/in/dhanush-p-sukruth",
   website: "dhanushpsukruth.com",

@@ -31,9 +31,6 @@ const Hero = () => {
           {/* Contact Info Bar */}
           <div className="flex flex-wrap justify-center items-center gap-6 mb-12 text-sm text-gray-600">
             <div className="flex items-center gap-2">
-              <span>{personalInfo.phone}</span>
-            </div>
-            <div className="flex items-center gap-2">
               <Mail size={16} />
               <span>{personalInfo.email}</span>
             </div>

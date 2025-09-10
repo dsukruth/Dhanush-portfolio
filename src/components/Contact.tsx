@@ -36,12 +36,6 @@ const Contact = () => {
       href: `mailto:${personalInfo.email}`
     },
     {
-      icon: Phone,
-      title: 'Phone',
-      value: personalInfo.phone,
-      href: `tel:${personalInfo.phone}`
-    },
-    {
       icon: Linkedin,
       title: 'LinkedIn',
       value: personalInfo.linkedin,
