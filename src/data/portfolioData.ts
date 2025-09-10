@@ -1,7 +1,7 @@
 
 export const personalInfo = {
   name: "Dhanush P Sukruth",
-  email: "dsukruth@umd.edu",
+  email: "sukruthdhanush@gmail.com",
   location: "Washington D.C., USA",
   linkedin: "linkedin.com/in/dhanush-p-sukruth",
   website: "dhanushpsukruth.com",
