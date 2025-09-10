@@ -60,7 +60,7 @@ export const experience = [
     title: "Blockchain Engineer and Project Intern",
     company: "Existential Heroism Institute (Non-Profit)",
     location: "Washington D.C.",
-    period: "June 2025 – Present",
+    period: "June 2025 – August 2025",
     achievements: [
       "Integrated COSMOS SDK to develop interoperable blockchain solution",
       "Enabled cross-chain communication with 15+ different blockchain networks",
