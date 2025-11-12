@@ -1,13 +1,14 @@
 
 export const personalInfo = {
   name: "Dhanush P Sukruth",
-  email: "dsukruth@umd.edu",
+  email: "sukruthdhanush@gmail.com",
+  phone: "(227) 205-8830",
   location: "College Park, MD, USA",
   linkedin: "linkedin.com/in/dhanush-p-sukruth",
   website: "dhanushpsukruth.com",
-  title: "AI Engineer & Product Manager",
-  subtitle: "AI/ML Engineering | Blockchain Development | Product Management | Software Engineering",
-  bio: "Master's student in Information Systems at the University of Maryland's Robert H. Smith School of Business with hands-on experience in AI infrastructure, blockchain development, and project management. Previously worked as a Software Engineer at ISRO, ensuring 99.99% uptime of mission-critical satellite systems. Passionate about leveraging cutting-edge technology to solve complex problems and drive innovation across AI, blockchain, and product development.",
+  title: "Product Manager",
+  subtitle: "Product Management | AI/ML Engineering | Technical Program Management",
+  bio: "Product Manager with 3+ years of technical program management experience at ISRO with mission-critical systems serving $500M+ satellite programs. Scaled campus AI platform from 0→50K daily users achieving 92% satisfaction; delivered $2M+ projected cost savings for federal AI platform with 90% user adoption. Technical background in Python and cloud platforms enables effective translation of complex stakeholder needs into shipped products, bridging business strategy and engineering execution.",
   yearsExperience: "3+",
   projectsCompleted: "15+",
   volunteersLed: "800+",
@@ -45,39 +46,36 @@ export const technicalSkills = {
 
 export const experience = [
   {
-    title: "AI Engineer Intern",
+    title: "AI Engineer Intern (PM highlights)",
     company: "Connyct Inc.",
     location: "New York City, NY",
     period: "June 2025 – Present",
     achievements: [
-      "Engineered comprehensive AI application from scratch to address Campus AI platform's need for effective query handling, developing end-to-end RAG architecture that successfully deployed as a scalable campus-wide solution",
-      "Directed cross-functional teams of 10+ engineers, applying Agile methodologies to accelerate feature delivery",
-      "Delivered clear project documentation and milestone reporting to senior management",
-      "Skills: Python, AWS, RAG, MCP, LangChain, Vector Databases, Docker, Kubernetes, TensorFlow, PyTorch, CI/CD, Machine Learning"
+      "Led product strategy and roadmap for campus AI platform serving 10+ departments, conducting user research with 50+ students and stakeholders to define product vision, resulting in 50K+ daily active queries and 92% user satisfaction score within three months of launch",
+      "Defined product requirements and success metrics for AI recommendation engine, partnering with engineering to achieve 99% uptime and 25% increase in feature adoption",
+      "Skills: Product Strategy, User Research, Product Roadmap, AI/ML, Stakeholder Management, Python, AWS, RAG"
     ]
   },
   {
-    title: "Software Development Intern",
-    company: "Existential Heroism Institute",
+    title: "Software Development Intern (PM highlights)",
+    company: "Existential Heroism Institute (Non-Profit)",
     location: "College Park, MD",
     period: "June 2025 – Aug 2025",
     achievements: [
-      "Integrated COSMOS SDK to develop interoperable blockchain solutions, enabling cross-chain communication with 15+ blockchain networks",
-      "Applied risk management through secure smart contract implementation and cryptography solutions",
-      "Implemented zero-knowledge proofs (ZKPs) to ensure secure and private data verification across distributed ledgers",
-      "Skills: Blockchain, COSMOS SDK, Solidity, Go, Proof of Stake, Zero-Knowledge Proofs, Smart Contracts, Cryptography"
+      "Defined product vision and strategy for blockchain platform integrating 15+ networks through competitive analysis, resulting in 10K+ daily transactions and onboarding eight partner organizations within the launch quarter",
+      "Established product analytics framework tracking user behavior and performance metrics, achieving 50% faster developer onboarding and 80% reduction in production incidents",
+      "Skills: Product Vision, Competitive Analysis, Product Analytics, Blockchain, COSMOS SDK, Stakeholder Management"
     ]
   },
   {
     title: "Project Manager – Capstone Project",
     company: "Twenty39 LLC",
     location: "Washington D.C.",
-    period: "June 2025 – Aug 2025",
+    period: "June 2025 – Nov 2025",
     achievements: [
-      "Spearheaded federal government AI chatbot initiative, streamlining document analysis workflows and reducing procurement cycle time by 30%",
-      "Directed cross-functional teams of 10+ engineers, implementing Agile methodologies to accelerate feature delivery",
-      "Led stakeholder alignment with federal clients, ensuring compliance with security and privacy regulations",
-      "Skills: Project Management, NLP, AI/ML, Agile, Federal Contracting, Stakeholder Management, Python, Leadership"
+      "Owned end-to-end product lifecycle through stakeholder interviews with 20+ procurement officers, creating a roadmap that delivered 70% faster document processing and $2M+ projected annual savings",
+      "Developed go-to-market strategy and conducted onboarding for 50+ federal employees, achieving 90% user adoption within the first month and 95% satisfaction score",
+      "Skills: Product Lifecycle Management, Stakeholder Interviews, Go-to-Market Strategy, NLP, AI/ML, Agile, Federal Contracting"
     ]
   },
   {
@@ -86,10 +84,9 @@ export const experience = [
     location: "Bengaluru, India",
     period: "Dec 2021 – Jul 2024",
     achievements: [
-      "Coordinated with senior scientists to manage mission-critical software testing projects, ensuring 99.99% uptime of satellite communication systems",
-      "Implemented end-to-end test automation pipelines, increasing coverage by 60% while meeting industry compliance",
-      "Maintained detailed project documentation, quality reports, and compliance records",
-      "Skills: Test Automation, Python, Selenium, JIRA, Jenkins, System Testing, Code Review, Quality Assurance"
+      "Managed testing product roadmap for 12 satellite communication systems, defining strategy that increased test coverage by 60% and maintained 99.99% reliability across $500M+ missions",
+      "Drove adoption of monitoring features through user training and documentation, achieving 100% team adoption and reducing system downtime by 40% through data-driven insights",
+      "Skills: Product Roadmap, Test Automation, Python, JIRA, Jenkins, System Testing, Quality Assurance, Data-Driven Decision Making"
     ]
   }
 ];
@@ -101,9 +98,9 @@ export const leadership = [
     location: "Bengaluru, India",
     period: "July 2022 – Jul 2024",
     achievements: [
-      "Directed 800 volunteers to deliver education to 2,000+ underprivileged children, increasing participation by 150%",
-      "Designed and executed fundraising initiatives, generating $25K+ in donations for educational infrastructure",
-      "Skills: Leadership, Strategic Planning, Fundraising, Community Outreach, Education, Team Management"
+      "Directed 800 volunteers delivering education to 2,000+ underprivileged children (150% increase) and executed fundraising generating $25K+ for educational infrastructure",
+      "Developed and launched three new education programs through stakeholder engagement with local schools and NGOs, expanding services to underserved communities and increasing program reach by 200% year-over-year",
+      "Skills: Leadership, Strategic Planning, Fundraising, Stakeholder Engagement, Community Outreach, Program Development"
     ]
   }
 ];

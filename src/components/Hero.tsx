@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { ChevronDown, ArrowRight, MapPin, Mail, Linkedin } from 'lucide-react';
+import { ChevronDown, ArrowRight, MapPin, Mail, Linkedin, Phone } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 const Hero = () => {
@@ -30,6 +30,12 @@ const Hero = () => {
         <div className="animate-fade-in">
           {/* Contact Info Bar */}
           <div className="flex flex-wrap justify-center items-center gap-6 mb-12 text-sm text-gray-600">
+            {personalInfo.phone && (
+              <div className="flex items-center gap-2">
+                <Phone size={16} />
+                <span>{personalInfo.phone}</span>
+              </div>
+            )}
             <div className="flex items-center gap-2">
               <Mail size={16} />
               <span>{personalInfo.email}</span>

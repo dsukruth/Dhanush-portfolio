@@ -50,6 +50,12 @@ const Contact = () => {
   };
 
   const contactInfo = [
+    ...(personalInfo.phone ? [{
+      icon: Phone,
+      title: 'Phone',
+      value: personalInfo.phone,
+      href: `tel:${personalInfo.phone}`
+    }] : []),
     {
       icon: Mail,
       title: 'Email',
