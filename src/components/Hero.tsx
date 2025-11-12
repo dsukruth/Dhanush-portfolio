@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { ChevronDown, ArrowRight, MapPin, Mail, Linkedin, Phone } from 'lucide-react';
+import { ChevronDown, ArrowRight, MapPin, Mail, Linkedin, Phone, Download } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 const Hero = () => {
@@ -81,6 +81,14 @@ const Hero = () => {
               <span>View My Work</span>
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
             </button>
+            <a
+              href="/Dhanush_Sukruth_Resume.pdf"
+              download="Dhanush_Sukruth_Resume.pdf"
+              className="liquid-glass-button px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full font-medium transition-all duration-300 flex items-center justify-center space-x-2 hover:from-indigo-700 hover:to-purple-700"
+            >
+              <Download size={20} />
+              <span>Download Resume</span>
+            </a>
             <button
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="liquid-glass-button px-8 py-4 border-2 border-gray-900 text-gray-900 rounded-full font-medium transition-all duration-300"
