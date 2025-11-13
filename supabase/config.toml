@@ -1,1 +1,7 @@
 project_id = "rpxwbpaijefgzhswyonc"
+
+[functions.send-contact-email]
+verify_jwt = false
+
+[functions.chat-assistant]
+verify_jwt = false
