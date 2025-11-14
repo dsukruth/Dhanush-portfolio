@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { ChevronDown, ArrowRight, MapPin, Mail, Linkedin, Phone, Download } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
+import Chatbot from './Chatbot';
 
 const Hero = () => {
   const [text, setText] = useState('');
@@ -57,6 +58,9 @@ const Hero = () => {
               </h1>
             </div>
           </div>
+          
+          {/* Chatbot */}
+          <Chatbot />
           
           <div className="text-2xl md:text-3xl text-gray-600 mb-6 font-light">
             <span className="border-r-2 border-gray-400 pr-1 animate-pulse">
