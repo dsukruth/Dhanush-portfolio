@@ -16,7 +16,7 @@ const Chatbot = ({ embedded = false }: ChatbotProps) => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: "Anything you want to ask about?",
+      content: "Hi! I'm here to help you learn about Dhanush's professional background and experience. Feel free to ask me anything!",
     },
   ]);
   const [input, setInput] = useState('');
