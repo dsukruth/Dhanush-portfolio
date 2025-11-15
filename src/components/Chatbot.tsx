@@ -107,10 +107,11 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="w-full max-w-3xl mx-auto py-8 px-4">
-      <div className="flex flex-col h-[600px]">
+    <section className="w-full bg-gradient-to-b from-white to-gray-50 py-16 px-4">
+      <div className="max-w-4xl mx-auto">
+        <div className="flex flex-col h-[70vh] min-h-[500px] max-h-[800px] bg-white rounded-2xl shadow-sm border border-gray-200">
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto space-y-6 mb-4">
+        <div className="flex-1 overflow-y-auto space-y-6 p-6">
           {messages.map((message, index) => (
             <div
               key={index}
@@ -156,8 +157,8 @@ const Chatbot = () => {
         </div>
 
         {/* Input */}
-        <div className="border-t pt-4">
-          <div className="relative">
+        <div className="border-t border-gray-200 p-4 bg-gray-50">
+          <div className="relative max-w-3xl mx-auto">
             <input
               type="text"
               value={input}
@@ -177,8 +178,9 @@ const Chatbot = () => {
             </button>
           </div>
         </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
