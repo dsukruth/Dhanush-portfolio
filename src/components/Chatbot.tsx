@@ -104,55 +104,7 @@ const Chatbot = () => {
   return (
     <section className="w-full bg-gradient-to-b from-white to-gray-50 py-16 px-4">
       <div className="max-w-4xl mx-auto">
-        <div className="flex flex-col h-[35vh] min-h-[280px] max-h-[400px] bg-white rounded-2xl shadow-sm border border-gray-200">
-        {/* Messages */}
-        <div className="flex-1 overflow-y-auto space-y-6 p-6">
-          {messages.map((message, index) => (
-            <div
-              key={index}
-              className={`flex ${
-                message.role === 'user' ? 'justify-end' : 'justify-start'
-              }`}
-            >
-              <div className="flex gap-3 max-w-[80%]">
-                {message.role === 'assistant' && (
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center flex-shrink-0">
-                    <Bot size={16} className="text-white" />
-                  </div>
-                )}
-                <div
-                  className={`p-4 rounded-2xl ${
-                    message.role === 'user'
-                      ? 'bg-gray-100 text-gray-900'
-                      : 'text-gray-900'
-                  }`}
-                >
-                  <p className="text-sm whitespace-pre-wrap leading-relaxed">{message.content}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-          {isLoading && (
-            <div className="flex justify-start">
-              <div className="flex gap-3 max-w-[80%]">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center flex-shrink-0">
-                  <Bot size={16} className="text-white" />
-                </div>
-                <div className="p-4">
-                  <div className="flex gap-1">
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" />
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }} />
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-          <div ref={messagesEndRef} />
-        </div>
-
-        {/* Input */}
-        <div className="border-t border-gray-200 p-4 bg-gray-50">
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-4">
           <div className="relative max-w-3xl mx-auto">
             <input
               type="text"
@@ -172,7 +124,6 @@ const Chatbot = () => {
               <Send size={18} />
             </button>
           </div>
-        </div>
         </div>
       </div>
     </section>
