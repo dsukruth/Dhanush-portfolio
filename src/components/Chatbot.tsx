@@ -104,25 +104,76 @@ const Chatbot = () => {
   return (
     <section className="w-full bg-gradient-to-b from-white to-gray-50 py-16 px-4">
       <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-4">
-          <div className="relative max-w-3xl mx-auto">
-            <input
-              type="text"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyPress={handleKeyPress}
-              placeholder="Message about Dhanush's experience, skills, projects..."
-              className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-400 text-sm shadow-sm"
-              disabled={isLoading}
-            />
-            <button
-              onClick={sendMessage}
-              disabled={!input.trim() || isLoading}
-              className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-gray-300"
-              aria-label="Send message"
-            >
-              <Send size={18} />
-            </button>
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-200">
+          {/* Compact Messages Display */}
+          {messages.length > 0 && (
+            <div className="max-h-48 overflow-y-auto p-3 space-y-2 border-b border-gray-200">
+              {messages.map((message, index) => (
+                <div
+                  key={index}
+                  className={`flex ${
+                    message.role === 'user' ? 'justify-end' : 'justify-start'
+                  }`}
+                >
+                  <div className="flex gap-2 max-w-[85%]">
+                    {message.role === 'assistant' && (
+                      <div className="w-6 h-6 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center flex-shrink-0">
+                        <Bot size={12} className="text-white" />
+                      </div>
+                    )}
+                    <div
+                      className={`px-3 py-2 rounded-lg text-sm ${
+                        message.role === 'user'
+                          ? 'bg-gray-100 text-gray-900'
+                          : 'text-gray-900'
+                      }`}
+                    >
+                      <p className="whitespace-pre-wrap leading-snug">{message.content}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+              {isLoading && (
+                <div className="flex justify-start">
+                  <div className="flex gap-2">
+                    <div className="w-6 h-6 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center flex-shrink-0">
+                      <Bot size={12} className="text-white" />
+                    </div>
+                    <div className="px-3 py-2">
+                      <div className="flex gap-1">
+                        <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" />
+                        <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }} />
+                        <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              <div ref={messagesEndRef} />
+            </div>
+          )}
+          
+          {/* Input Area */}
+          <div className="p-4">
+            <div className="relative max-w-3xl mx-auto">
+              <input
+                type="text"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyPress={handleKeyPress}
+                placeholder="Message about Dhanush's experience, skills, projects..."
+                className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-400 text-sm shadow-sm"
+                disabled={isLoading}
+              />
+              <button
+                onClick={sendMessage}
+                disabled={!input.trim() || isLoading}
+                className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-gray-300"
+                aria-label="Send message"
+              >
+                <Send size={18} />
+              </button>
+            </div>
           </div>
         </div>
       </div>
