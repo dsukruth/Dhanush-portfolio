@@ -104,7 +104,7 @@ const Chatbot = () => {
   return (
     <section className="w-full bg-gradient-to-b from-white to-gray-50 py-16 px-4">
       <div className="max-w-4xl mx-auto">
-        <div className="flex flex-col h-[70vh] min-h-[500px] max-h-[800px] bg-white rounded-2xl shadow-sm border border-gray-200">
+        <div className="flex flex-col h-[35vh] min-h-[280px] max-h-[400px] bg-white rounded-2xl shadow-sm border border-gray-200">
         {/* Messages */}
         <div className="flex-1 overflow-y-auto space-y-6 p-6">
           {messages.map((message, index) => (
