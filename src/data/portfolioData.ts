@@ -2,7 +2,7 @@
 export const personalInfo = {
   name: "Dhanush P Sukruth",
   email: "sukruthdhanush@gmail.com",
-  phone: "(227) 205-8830",
+  phone: "",
   location: "College Park, MD, USA",
   linkedin: "linkedin.com/in/dhanush-p-sukruth",
   website: "dhanushpsukruth.com",
