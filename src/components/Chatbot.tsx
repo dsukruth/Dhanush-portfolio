@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Bot } from 'lucide-react';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -107,7 +108,8 @@ const Chatbot = () => {
         <div className="bg-white rounded-2xl shadow-sm border border-gray-200">
           {/* Compact Messages Display */}
           {messages.length > 0 && (
-            <div className="max-h-48 overflow-y-auto p-3 space-y-2 border-b border-gray-200">
+            <ScrollArea className="max-h-48 border-b border-gray-200">
+              <div className="p-3 space-y-2">
               {messages.map((message, index) => (
                 <div
                   key={index}
@@ -150,7 +152,8 @@ const Chatbot = () => {
                 </div>
               )}
               <div ref={messagesEndRef} />
-            </div>
+              </div>
+            </ScrollArea>
           )}
           
           {/* Input Area */}
