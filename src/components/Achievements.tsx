@@ -11,19 +11,19 @@ import {
 const achievements = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=800&h=600&fit=crop',
+    image: '/placeholder.svg',
     caption: 'AI in Food Insecurity Case Competition - Winner',
     date: '2025'
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1569705460033-cfaa4bf9f822?w=800&h=600&fit=crop',
+    image: '/placeholder.svg',
     caption: 'Campus AI Platform Launch - 50K+ Daily Users',
     date: '2025'
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1531537571171-a707bf2683da?w=800&h=600&fit=crop',
+    image: '/placeholder.svg',
     caption: 'Leadership Excellence Award',
     date: '2024'
   }
