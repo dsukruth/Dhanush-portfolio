@@ -57,6 +57,17 @@ const Hero = () => {
               </h1>
             </div>
           </div>
+
+          {/* Profile Photo */}
+          <div className="mb-8 flex justify-center">
+            <div className="w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-white shadow-xl">
+              <img
+                src="/placeholder.svg"
+                alt={personalInfo.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
           
           <div className="text-2xl md:text-3xl text-gray-600 mb-6 font-light">
             <span className="border-r-2 border-gray-400 pr-1 animate-pulse">
