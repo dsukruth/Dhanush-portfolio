@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { ChevronDown, ArrowRight, MapPin, Mail, Linkedin, Phone, Download } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
+import profilePhoto from '@/assets/profile-photo.jpeg';
 
 const Hero = () => {
   const [text, setText] = useState('');
@@ -62,7 +63,7 @@ const Hero = () => {
           <div className="mb-8 flex justify-center">
             <div className="w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-white shadow-xl">
               <img
-                src="/placeholder.svg"
+                src={profilePhoto}
                 alt={personalInfo.name}
                 className="w-full h-full object-cover"
               />

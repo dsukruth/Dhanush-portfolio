@@ -57,11 +57,9 @@ const Achievements = () => {
                   <div className="p-4">
                     <div className="group relative overflow-hidden rounded-2xl bg-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300">
                       <div className="aspect-[4/3] overflow-hidden">
-                        <img
-                          src={achievement.image}
-                          alt={achievement.caption}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        />
+                        <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                          <Award size={48} className="text-gray-400" />
+                        </div>
                       </div>
                       <div className="p-6 bg-white">
                         <div className="flex items-start gap-3 mb-2">
