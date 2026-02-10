@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Linkedin, Calendar } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
 import { personalInfo } from '../data/portfolioData';
 import { supabase } from '@/integrations/supabase/client';
@@ -113,7 +113,27 @@ const Contact = () => {
               ))}
             </div>
 
-            <div className="mt-12 p-8 bg-gray-900 rounded-2xl">
+            {/* Book a Call */}
+            <div className="mt-12 p-8 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl">
+              <div className="flex items-center gap-3 mb-4">
+                <Calendar size={24} className="text-white" />
+                <h4 className="text-xl font-semibold text-white">Book a Call</h4>
+              </div>
+              <p className="text-indigo-100 leading-relaxed mb-6">
+                Prefer a live conversation? Schedule a time that works for you.
+              </p>
+              <a
+                href="https://cal.com/your-username"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-indigo-600 rounded-xl font-semibold transition-all duration-300 hover:bg-indigo-50 hover:scale-105"
+              >
+                <Calendar size={18} />
+                Schedule a Meeting
+              </a>
+            </div>
+
+            <div className="mt-8 p-8 bg-gray-900 rounded-2xl">
               <h4 className="text-xl font-semibold text-white mb-4">Available for Opportunities</h4>
               <p className="text-gray-300 leading-relaxed mb-4">
                 Currently seeking full-time opportunities in:
