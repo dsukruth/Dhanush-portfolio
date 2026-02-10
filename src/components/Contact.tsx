@@ -122,15 +122,15 @@ const Contact = () => {
               <p className="text-indigo-100 leading-relaxed mb-6">
                 Prefer a live conversation? Schedule a time that works for you.
               </p>
-              <a
-                href="https://cal.com/your-username"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                data-cal-link="dhanush-sukruth/30min"
+                data-cal-namespace="30min"
+                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white text-indigo-600 rounded-xl font-semibold transition-all duration-300 hover:bg-indigo-50 hover:scale-105"
               >
                 <Calendar size={18} />
                 Schedule a Meeting
-              </a>
+              </button>
             </div>
 
             <div className="mt-8 p-8 bg-gray-900 rounded-2xl">
