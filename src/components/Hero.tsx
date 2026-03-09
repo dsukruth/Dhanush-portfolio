@@ -102,7 +102,7 @@ const Hero = () => {
             </button>
             <a
               href="/Dhanush_Sukruth_Resume.pdf"
-              download="Dhanush_Sukruth_Resume.pdf"
+              download="Dhanush_Sukruth_Resume.docx"
               className="liquid-glass-button px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full font-medium transition-all duration-300 flex items-center justify-center space-x-2 hover:from-indigo-700 hover:to-purple-700"
             >
               <Download size={20} />
