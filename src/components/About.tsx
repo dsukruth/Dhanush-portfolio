@@ -1,8 +1,10 @@
-
 import React from 'react';
 import { GraduationCap, Award, Users } from 'lucide-react';
 import { personalInfo, education, leadership } from '../data/portfolioData';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip';
+import { SplineScene } from './ui/splite';
+import { Spotlight } from './ui/spotlight';
+import { Card } from './ui/card';
 
 const About = () => {
   const stats = [
