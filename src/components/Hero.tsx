@@ -248,7 +248,7 @@ const Hero = () => {
           }
         `
       }} />
-    </section>
+    </WavyBackground>
   );
 };
 
