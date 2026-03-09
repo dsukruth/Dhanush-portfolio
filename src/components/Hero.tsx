@@ -1,8 +1,8 @@
-
 import React, { useEffect, useState } from 'react';
 import { ChevronDown, ArrowRight, MapPin, Mail, Linkedin, Phone, Download } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 import profilePhoto from '@/assets/profile-photo.jpeg';
+import { WavyBackground } from '@/components/ui/wavy-background';
 
 const Hero = () => {
   const [text, setText] = useState('');
@@ -26,7 +26,14 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-gray-50 to-white pt-16">
+    <WavyBackground
+      containerClassName="min-h-screen flex items-center justify-center relative pt-16"
+      colors={["#667eea", "#764ba2", "#c084fc", "#e879f9", "#4facfe"]}
+      backgroundFill="white"
+      waveOpacity={0.3}
+      blur={12}
+      speed="slow"
+    >
       <div className="text-center z-10 max-w-6xl mx-auto px-6">
         <div className="animate-fade-in">
           {/* Contact Info Bar */}
@@ -241,7 +248,7 @@ const Hero = () => {
           }
         `
       }} />
-    </section>
+    </WavyBackground>
   );
 };
 
