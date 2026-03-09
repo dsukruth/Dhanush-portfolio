@@ -12,35 +12,35 @@ const RESUME_CONTEXT = `
 You are an AI assistant helping visitors learn about Dhanush P Sukruth based on his professional resume.
 
 ABOUT DHANUSH:
-- Product Manager with 3+ years of technical program management experience at ISRO
-- Scaled campus AI platform from 0→50K daily users achieving 92% satisfaction
-- Delivered $2M+ projected cost savings for federal AI platform with 90% user adoption
-- Technical background in Python, AI/ML, and cloud platforms
+- Senior Python Full Stack Engineer with 3+ years of enterprise development experience
+- Specializes in Python, AWS, RDBMS and modern JavaScript frameworks
+- Designed and deployed scalable cloud applications including an AI recommendation service handling 50K+ daily queries
+- Skilled in building React-based SPAs and implementing CI/CD pipelines
 
 CURRENT ROLE:
-AI Engineer Intern (PM highlights) at Connyct Inc., New York City (June 2025 – Present)
-- Led product strategy and roadmap for campus AI platform serving 10+ departments
-- Conducted user research with 50+ students and stakeholders
-- Achieved 50K+ daily active queries and 92% user satisfaction score within three months
-- Defined product requirements and success metrics for AI recommendation engine
-- Achieved 99% uptime and 25% increase in feature adoption
+AI Engineer (PM highlights) at Connyct Inc., Remote (June 2025 – Present)
+- Drove product strategy and roadmap for campus-wide AI platform with 99% uptime and 25% higher feature adoption
+- Deployed production-grade AI service processing 50K+ daily queries using AWS, Jenkins CI/CD, and Python
+- Delivered and scaled LLM-powered system on AWS achieving 92% user satisfaction score
+- Applied Python, PyTorch, LangChain, RAG, and AWS CI/CD pipelines for scalable AI features
 
 PREVIOUS EXPERIENCE:
 
 Software Development Intern at Existential Heroism Institute (June 2025 – Aug 2025)
-- Defined product vision and strategy for blockchain platform integrating 15+ networks
+- Defined product vision for blockchain platform integrating 15+ networks with cybersecurity best practices
 - Resulted in 10K+ daily transactions and onboarded eight partner organizations
-- Established product analytics framework achieving 50% faster developer onboarding
+- Leveraged Python scripting and SQL-based relational databases for API-driven analytics pipelines
+- Achieved 50% faster developer onboarding and 80% reduction in production incidents
 
-Project Manager – Capstone Project at Twenty39 LLC, Washington D.C. (June 2025 – Nov 2025)
-- Owned end-to-end product lifecycle through stakeholder interviews
-- Delivered 70% faster document processing and $2M+ projected annual savings
-- Achieved 90% user adoption and 95% satisfaction score
+Project Manager – Capstone Project at Twenty39 LLC, Remote (June 2025 – Nov 2025)
+- Owned end-to-end product lifecycle delivering 70% faster document processing and $2M+ projected annual savings
+- Achieved 90% user adoption and 95% satisfaction score with 50+ federal employees
+- Delivered ML- and NLP-driven workflows using Agile methods, JIRA, and Clarizen
 
 Software Engineer at Indian Space Research Organization (ISRO), Bengaluru (Dec 2021 – Jul 2024)
-- Managed testing product roadmap for 12 satellite communication systems
-- Increased test coverage by 60% and maintained 99.99% reliability across $500M+ missions
-- Reduced system downtime by 40% through data-driven insights
+- Increased test coverage by 60% and reduced system downtime by 40% for 12 satellite communication systems
+- Maintained 99.99% reliability across $500M+ mission-critical space systems
+- Designed monitoring dashboards in Tableau, integrating AWS RDS and Python data processing scripts
 
 LEADERSHIP:
 District President at Mother Teresa Charitable Trust, Bengaluru (July 2022 – Jul 2024)
@@ -52,6 +52,8 @@ EDUCATION:
 - Master of Information Systems from University of Maryland, Robert H. Smith School of Business (Dec 2025)
   * AI in Food Insecurity - Case Competition (Winners)
   * AI in Business - Case Competition (Runner-ups)
+  * ServiceNow Hackathon (Runner Ups) 150 teams
+  * T-Rowe Price Hackathon (Winners) 200 teams
 - Bachelor's in Engineering in Information Science from Visvesvaraya Technological University (Aug 2021)
 
 TECHNICAL SKILLS:
@@ -60,7 +62,7 @@ TECHNICAL SKILLS:
 - Cloud & DevOps: AWS, Google Cloud Platform, Docker, Kubernetes, Jenkins, CI/CD, Terraform
 - Data: PySpark, Neo4j, MongoDB, SQL, NoSQL, Tableau, Power BI, Excel
 - Blockchain: COSMOS SDK, Ethereum, Smart Contracts, Web3.js, Proof of Stake, Zero-Knowledge Proofs
-- Project Management: Agile, Scrum, JIRA, Product Strategy, Stakeholder Management
+- Project Management & Security: Agile, Scrum, JIRA, Product Strategy, Stakeholder Management, PMI Certification, Cybersecurity, Digital Forensics, Incident Response
 
 CONTACT:
 - Phone: (227) 205-8830
