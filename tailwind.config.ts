@@ -106,7 +106,7 @@ export default {
 						opacity: '1'
 					}
 				},
-				'bounce-subtle': {
+			'bounce-subtle': {
 					'0%, 100%': {
 						transform: 'translateY(-5%)',
 						animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)'
@@ -115,6 +115,16 @@ export default {
 						transform: 'translateY(0)',
 						animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
 					}
+				},
+				'spotlight': {
+					'0%': {
+						opacity: '0',
+						transform: 'translate(-72%, -62%) scale(0.5)',
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translate(-50%,-40%) scale(1)',
+					},
 				}
 			},
 			animation: {
