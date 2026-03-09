@@ -2,13 +2,13 @@
 export const personalInfo = {
   name: "Dhanush P Sukruth",
   email: "sukruthdhanush@gmail.com",
-  phone: "",
+  phone: "(227) 205-8830",
   location: "College Park, MD, USA",
   linkedin: "linkedin.com/in/dhanush-p-sukruth",
   website: "dhanushpsukruth.com",
-  title: "Product Manager",
-  subtitle: "Product Management | AI/ML Engineering | Technical Program Management",
-  bio: "Product Manager with 3+ years of technical program management experience at ISRO with mission-critical systems serving $500M+ satellite programs. Scaled campus AI platform from 0→50K daily users achieving 92% satisfaction; delivered $2M+ projected cost savings for federal AI platform with 90% user adoption. Technical background in Python and cloud platforms enables effective translation of complex stakeholder needs into shipped products, bridging business strategy and engineering execution.",
+  title: "Senior Python Full Stack Engineer",
+  subtitle: "Python | AWS | AI/ML Engineering | Full Stack Development",
+  bio: "Senior Python full stack engineer with over 3 years of enterprise development experience, specializing in Python, AWS, RDBMS and modern JavaScript frameworks. Designed and deployed scalable cloud applications to process structured and unstructured data, including an AI recommendation service handling 50K+ daily queries. Skilled in building React-based SPAs and implementing CI/CD pipelines for reliable, production-grade solutions.",
   yearsExperience: "3+",
   projectsCompleted: "15+",
   volunteersLed: "800+",
@@ -23,7 +23,9 @@ export const education = [
     period: "Dec 2025",
     achievements: [
       "AI in Food Insecurity - Case Competition (Winners)",
-      "AI in Business - Case Competition (Runner-ups)"
+      "AI in Business - Case Competition (Runner-ups)",
+      "ServiceNow Hackathon (Runner Ups) 150 teams",
+      "T-Rowe Price Hackathon (Winners) 200 teams"
     ]
   },
   {
@@ -41,41 +43,44 @@ export const technicalSkills = {
   cloudDevOps: ["AWS", "Google Cloud Platform", "Docker", "Kubernetes", "Jenkins", "CI/CD", "Terraform"],
   dataAnalytics: ["PySpark", "Neo4j", "MongoDB", "SQL", "NoSQL", "Tableau", "Power BI", "Excel"],
   blockchain: ["COSMOS SDK", "Ethereum", "Smart Contracts", "Web3.js", "Proof of Stake", "Zero-Knowledge Proofs"],
-  projectManagement: ["Agile", "Scrum", "JIRA", "Product Strategy", "Stakeholder Management", "Team Leadership"]
+  projectManagement: ["Agile", "Scrum", "JIRA", "Product Strategy", "Stakeholder Management", "Team Leadership", "Asana", "Clarizen", "PMI Certification", "Cybersecurity", "Digital Forensics", "Incident Response"]
 };
 
 export const experience = [
   {
-    title: "AI Engineer Intern (PM highlights)",
+    title: "AI Engineer (PM highlights)",
     company: "Connyct Inc.",
-    location: "New York City, NY",
+    location: "Remote",
     period: "June 2025 – Present",
     achievements: [
-      "Led product strategy and roadmap for campus AI platform serving 10+ departments, conducting user research with 50+ students and stakeholders to define product vision, resulting in 50K+ daily active queries and 92% user satisfaction score within three months of launch",
-      "Defined product requirements and success metrics for AI recommendation engine, partnering with engineering to achieve 99% uptime and 25% increase in feature adoption",
-      "Skills: Product Strategy, User Research, Product Roadmap, AI/ML, Stakeholder Management, Python, AWS, RAG"
+      "Drove the product strategy and roadmap for a campus-wide AI platform, leading user research and partnering with engineering to launch a recommendation engine with 99% uptime and 25% higher feature adoption",
+      "Orchestrated cross-functional execution using Agile methodologies, leveraging AWS, Jenkins-based CI/CD pipelines, and Python to deploy a production-grade AI service processing 50K+ daily queries within three months",
+      "Delivered and scaled an LLM-powered system on AWS with object-oriented design principles, achieving a 92% user satisfaction score",
+      "Skills: Python, PyTorch, LangChain, RAG, AWS, CI/CD, Product Strategy, OOP"
     ]
   },
   {
     title: "Software Development Intern (PM highlights)",
     company: "Existential Heroism Institute (Non-Profit)",
-    location: "College Park, MD",
+    location: "Remote",
     period: "June 2025 – Aug 2025",
     achievements: [
-      "Defined product vision and strategy for blockchain platform integrating 15+ networks through competitive analysis, resulting in 10K+ daily transactions and onboarding eight partner organizations within the launch quarter",
-      "Established product analytics framework tracking user behavior and performance metrics, achieving 50% faster developer onboarding and 80% reduction in production incidents",
-      "Skills: Product Vision, Competitive Analysis, Product Analytics, Blockchain, COSMOS SDK, Stakeholder Management"
+      "Defined product vision and strategy for blockchain platform integrating 15+ networks, embedding cybersecurity best practices, resulting in 10K+ daily transactions and onboarding eight partner organizations",
+      "Established product analytics framework achieving 50% faster developer onboarding and 80% reduction in production incidents",
+      "Leveraged Python scripting and SQL-based relational databases to develop API-driven product analytics pipelines",
+      "Skills: Python, SQL, Blockchain, Cybersecurity, Product Analytics, API Development"
     ]
   },
   {
     title: "Project Manager – Capstone Project",
     company: "Twenty39 LLC",
-    location: "Washington D.C.",
+    location: "Remote",
     period: "June 2025 – Nov 2025",
     achievements: [
-      "Owned end-to-end product lifecycle through stakeholder interviews with 20+ procurement officers, creating a roadmap that delivered 70% faster document processing and $2M+ projected annual savings",
-      "Developed go-to-market strategy and conducted onboarding for 50+ federal employees, achieving 90% user adoption within the first month and 95% satisfaction score",
-      "Skills: Product Lifecycle Management, Stakeholder Interviews, Go-to-Market Strategy, NLP, AI/ML, Agile, Federal Contracting"
+      "Owned end-to-end product lifecycle through stakeholder interviews with 20+ procurement officers, delivering 70% faster document processing and $2M+ projected annual savings",
+      "Executed go-to-market strategy and conducted onboarding for 50+ federal employees, achieving 90% user adoption and 95% satisfaction score",
+      "Delivered ML- and NLP-driven workflows projected to generate $2M+ in annual savings",
+      "Skills: ML, NLP, Agile, JIRA, Clarizen, Product Lifecycle Management, Stakeholder Interviews"
     ]
   },
   {
@@ -84,9 +89,10 @@ export const experience = [
     location: "Bengaluru, India",
     period: "Dec 2021 – Jul 2024",
     achievements: [
-      "Managed testing product roadmap for 12 satellite communication systems, defining strategy that increased test coverage by 60% and maintained 99.99% reliability across $500M+ missions",
-      "Drove adoption of monitoring features through user training and documentation, achieving 100% team adoption and reducing system downtime by 40% through data-driven insights",
-      "Skills: Product Roadmap, Test Automation, Python, JIRA, Jenkins, System Testing, Quality Assurance, Data-Driven Decision Making"
+      "Increased test coverage by 60% and reduced system downtime by 40% for 12 satellite communication systems through reliability testing and incident response protocols",
+      "Maintained 99.99% reliability across $500M+ mission-critical space systems",
+      "Designed monitoring dashboards in Tableau, integrating data from AWS RDS and Python data processing scripts for distributed satellite systems",
+      "Skills: Python, AWS RDS, Tableau, Jenkins, JIRA, System Testing, Data Pipelines"
     ]
   }
 ];

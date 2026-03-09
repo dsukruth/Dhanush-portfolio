@@ -46,8 +46,8 @@ const Navigation = () => {
               </button>
             ))}
             <a
-              href="/Dhanush_Sukruth_Resume.pdf"
-              download="Dhanush_Sukruth_Resume.pdf"
+              href="/Dhanush_Sukruth_Resume.docx"
+              download="Dhanush_Sukruth_Resume.docx"
               className="liquid-glass-button flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-full text-sm font-medium transition-all duration-300 hover:bg-gray-800"
             >
               <Download size={16} />
@@ -78,8 +78,8 @@ const Navigation = () => {
                 </button>
               ))}
               <a
-                href="/Dhanush_Sukruth_Resume.pdf"
-                download="Dhanush_Sukruth_Resume.pdf"
+                href="/Dhanush_Sukruth_Resume.docx"
+                download="Dhanush_Sukruth_Resume.docx"
                 className="liquid-glass-button flex items-center justify-center gap-2 w-full px-4 py-3 bg-gray-900 text-white rounded-lg text-sm font-medium transition-all duration-300"
               >
                 <Download size={16} />
