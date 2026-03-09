@@ -1,8 +1,8 @@
-
 import React, { useEffect, useState } from 'react';
 import { ChevronDown, ArrowRight, MapPin, Mail, Linkedin, Phone, Download } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 import profilePhoto from '@/assets/profile-photo.jpeg';
+import { WavyBackground } from '@/components/ui/wavy-background';
 
 const Hero = () => {
   const [text, setText] = useState('');
