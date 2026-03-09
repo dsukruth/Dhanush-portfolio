@@ -1,8 +1,10 @@
-
 import React from 'react';
 import { GraduationCap, Award, Users } from 'lucide-react';
 import { personalInfo, education, leadership } from '../data/portfolioData';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip';
+import { SplineScene } from './ui/splite';
+import { Spotlight } from './ui/spotlight';
+import { Card } from './ui/card';
 
 const About = () => {
   const stats = [
@@ -87,6 +89,17 @@ const About = () => {
           </div>
 
           <div className="space-y-8">
+            {/* 3D Interactive Scene */}
+            <Card className="w-full h-[400px] bg-gray-900/95 relative overflow-hidden rounded-2xl border border-gray-800 mb-8">
+              <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
+              <div className="w-full h-full">
+                <SplineScene 
+                  scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                  className="w-full h-full"
+                />
+              </div>
+            </Card>
+
             {/* Stats with Tooltips */}
             <TooltipProvider>
               <div className="grid grid-cols-1 gap-6">
