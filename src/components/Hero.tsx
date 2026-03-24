@@ -93,16 +93,18 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-20">
-            <button
-              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+            <a
+              href="https://github.com/dsukruth"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group liquid-glass-button px-8 py-4 bg-gray-900 text-white rounded-full font-medium transition-all duration-300 flex items-center justify-center space-x-2"
             >
               <span>View My Work</span>
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
-            </button>
+            </a>
             <a
-              href="/Dhanush_Sukruth_Resume.docx"
-              download="Dhanush_Sukruth_Resume.docxx"
+              href="/Dhanush_Sukruth_Resume.pdf"
+              download="Dhanush_Sukruth_Resume.pdf"
               className="liquid-glass-button px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full font-medium transition-all duration-300 flex items-center justify-center space-x-2 hover:from-indigo-700 hover:to-purple-700"
             >
               <Download size={20} />
