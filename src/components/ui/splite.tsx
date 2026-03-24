@@ -1,6 +1,7 @@
 'use client'
 
 import { Suspense, lazy } from 'react'
+// @ts-ignore - lazy import for code splitting
 const Spline = lazy(() => import('@splinetool/react-spline'))
 
 interface SplineSceneProps {
