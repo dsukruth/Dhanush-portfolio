@@ -6,9 +6,10 @@ export const personalInfo = {
   location: "College Park, MD, USA",
   linkedin: "linkedin.com/in/dhanush-p-sukruth",
   website: "dhanushpsukruth.com",
-  title: "Senior Python Full Stack Engineer",
-  subtitle: "Python | AWS | AI/ML Engineering | Full Stack Development",
-  bio: "Senior Python full stack engineer with over 3 years of enterprise development experience, specializing in Python, AWS, RDBMS and modern JavaScript frameworks. Designed and deployed scalable cloud applications to process structured and unstructured data, including an AI recommendation service handling 50K+ daily queries. Skilled in building React-based SPAs and implementing CI/CD pipelines for reliable, production-grade solutions.",
+  title: "AI Engineer",
+  subtitle: "Python | AWS | AI/ML Engineering | TensorFlow | PyTorch | LangChain",
+  bio: "Mid-level AI Software Engineer with extensive experience building production machine learning services and platforms. Proficient in Python, AWS, TensorFlow, PyTorch, Spark, and CI/CD pipelines, partnering with cross-functional teams to design, train, and deploy recommendation engines achieving 99% uptime and 25% higher adoption. Experienced in translating complex data insights into scalable AI solutions that drive measurable business results.",
+  github: "github.com/dsukruth",
   yearsExperience: "3+",
   projectsCompleted: "15+",
   volunteersLed: "800+",
@@ -22,6 +23,7 @@ export const education = [
     location: "College Park, MD",
     period: "Dec 2025",
     achievements: [
+      "Capital One (Hoo Hacks) - Best Finance App",
       "AI in Food Insecurity - Case Competition (Winners)",
       "AI in Business - Case Competition (Runner-ups)",
       "ServiceNow Hackathon (Runner Ups) 150 teams",
@@ -39,36 +41,37 @@ export const education = [
 
 export const technicalSkills = {
   languages: ["Python", "JavaScript", "SQL", "Go", "Solidity", "R", "Java"],
-  aiMlFrameworks: ["TensorFlow", "PyTorch", "LangChain", "Scikit-learn", "RAG", "Vector Databases", "MLflow", "ZenML"],
-  cloudDevOps: ["AWS", "Google Cloud Platform", "Docker", "Kubernetes", "Jenkins", "CI/CD", "Terraform"],
-  dataAnalytics: ["PySpark", "Neo4j", "MongoDB", "SQL", "NoSQL", "Tableau", "Power BI", "Excel"],
+  aiMlFrameworks: ["TensorFlow", "PyTorch", "LangChain", "Scikit-learn", "RAG", "Vector Databases", "MLflow", "ZenML", "H2O"],
+  cloudDevOps: ["AWS", "Google Cloud Platform", "Docker", "Kubernetes", "Jenkins", "CI/CD", "Terraform", "Conda"],
+  dataAnalytics: ["PySpark", "Neo4j", "MongoDB", "SQL", "NoSQL", "Tableau", "Power BI", "Excel", "Machine Learning", "Classification", "Clustering", "Sentiment Analysis", "Time Series Analysis", "Reinforcement Learning", "Fine-tuning"],
   blockchain: ["COSMOS SDK", "Ethereum", "Smart Contracts", "Web3.js", "Proof of Stake", "Zero-Knowledge Proofs"],
-  projectManagement: ["Agile", "Scrum", "JIRA", "Product Strategy", "Stakeholder Management", "Team Leadership", "Asana", "Clarizen", "PMI Certification", "Cybersecurity", "Digital Forensics", "Incident Response"]
+  projectManagement: ["Agile", "Scrum", "JIRA", "Product Strategy", "Stakeholder Management", "Team Leadership", "Asana", "Clarizen", "Google Suite", "PMI Certification", "Autonomy", "Digital Forensics", "Incident Response", "Cybersecurity"]
 };
 
 export const experience = [
   {
-    title: "AI Engineer (PM highlights)",
+    title: "AI Engineer",
     company: "Connyct Inc.",
     location: "Remote",
     period: "June 2025 – Present",
     achievements: [
       "Drove the product strategy and roadmap for a campus-wide AI platform, leading user research and partnering with engineering to launch a recommendation engine with 99% uptime and 25% higher feature adoption",
-      "Orchestrated cross-functional execution using Agile methodologies, leveraging AWS, Jenkins-based CI/CD pipelines, and Python to deploy a production-grade AI service processing 50K+ daily queries within three months",
-      "Delivered and scaled an LLM-powered system on AWS with object-oriented design principles, achieving a 92% user satisfaction score",
-      "Skills: Python, PyTorch, LangChain, RAG, AWS, CI/CD, Product Strategy, OOP"
+      "Orchestrated cross-functional execution using Agile methodologies, leveraging Asana, GCP, CI/CD pipelines, Conda environments, and machine learning workflows to deploy a production-grade AI service generating 50K+ daily active queries within three months",
+      "Defined and executed PRDs and OKRs for an AI-driven recommendation engine, partnering closely with engineering to deliver 99% uptime and drive a 25% increase in feature adoption",
+      "Delivered and scaled an LLM-powered system achieving a 92% user satisfaction score, applying fine-tuning techniques to translate technical capabilities into measurable user and business outcomes",
+      "Skills: Python, PyTorch, LangChain, RAG, H2O, AWS, CI/CD, Product Strategy"
     ]
   },
   {
-    title: "Software Development Intern (PM highlights)",
+    title: "Software Development Intern",
     company: "Existential Heroism Institute (Non-Profit)",
     location: "Remote",
     period: "June 2025 – Aug 2025",
     achievements: [
-      "Defined product vision and strategy for blockchain platform integrating 15+ networks, embedding cybersecurity best practices, resulting in 10K+ daily transactions and onboarding eight partner organizations",
-      "Established product analytics framework achieving 50% faster developer onboarding and 80% reduction in production incidents",
-      "Leveraged Python scripting and SQL-based relational databases to develop API-driven product analytics pipelines",
-      "Skills: Python, SQL, Blockchain, Cybersecurity, Product Analytics, API Development"
+      "Defined product vision and strategy for blockchain platform, integrating 15+ networks through competitive analysis and embedding cybersecurity best practices, resulting in 10K+ daily transactions and onboarding eight partner organizations",
+      "Established product analytics framework tracking user behavior and performance metrics, achieving 50% faster developer onboarding and 80% reduction in production incidents",
+      "Leveraged API development, blockchain integration, and Python scripting to build product-analytics pipelines, enabling faster stakeholder insights",
+      "Skills: Python, SQL, Blockchain, Cybersecurity, Product Analytics, API Development, Sentiment Analysis"
     ]
   },
   {
@@ -77,9 +80,9 @@ export const experience = [
     location: "Remote",
     period: "June 2025 – Nov 2025",
     achievements: [
-      "Owned end-to-end product lifecycle through stakeholder interviews with 20+ procurement officers, delivering 70% faster document processing and $2M+ projected annual savings",
-      "Executed go-to-market strategy and conducted onboarding for 50+ federal employees, achieving 90% user adoption and 95% satisfaction score",
-      "Delivered ML- and NLP-driven workflows projected to generate $2M+ in annual savings",
+      "Owned end-to-end product lifecycle through stakeholder interviews with 20+ procurement officers, creating a roadmap that delivered 70% faster document processing and $2M+ projected annual savings",
+      "Executed go-to-market strategy and conducted onboarding for 50+ federal employees, leveraging PMI Certification best practices and achieving 90% user adoption and 95% satisfaction score",
+      "Delivered ML- and NLP-driven workflows projected to generate $2M+ in annual savings, applying classification and clustering techniques",
       "Skills: ML, NLP, Agile, JIRA, Clarizen, Product Lifecycle Management, Stakeholder Interviews"
     ]
   },
@@ -89,10 +92,10 @@ export const experience = [
     location: "Bengaluru, India",
     period: "Dec 2021 – Jul 2024",
     achievements: [
-      "Increased test coverage by 60% and reduced system downtime by 40% for 12 satellite communication systems through reliability testing and incident response protocols",
-      "Maintained 99.99% reliability across $500M+ mission-critical space systems",
-      "Designed monitoring dashboards in Tableau, integrating data from AWS RDS and Python data processing scripts for distributed satellite systems",
-      "Skills: Python, AWS RDS, Tableau, Jenkins, JIRA, System Testing, Data Pipelines"
+      "Increased test coverage by 60% and reduced system downtime by 40% for 12 satellite communication systems by leading reliability testing and supporting incident response protocols",
+      "Maintained 99.99% reliability across $500M+ mission-critical space systems using data-driven insights and reliability engineering best practices",
+      "Designed and implemented monitoring dashboards in Tableau for distributed satellite systems, applying Python data analysis and time series analysis to detect anomalies",
+      "Skills: Python, Tableau, Time Series Analysis, Reliability Engineering, Data Pipelines"
     ]
   }
 ];
