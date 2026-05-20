@@ -74,7 +74,7 @@ const Projects = () => {
 
                 <div className="flex items-center justify-between">
                   <button className="liquid-glass-button flex items-center space-x-2 text-gray-900 transition-all duration-300 group/link font-medium px-4 py-2 rounded-full">
-                    <span>Learn More</span>
+                    <span>Learn more about {project.title}</span>
                     <ArrowRight size={18} className="group-hover/link:translate-x-1 transition-transform duration-200" />
                   </button>
                 </div>

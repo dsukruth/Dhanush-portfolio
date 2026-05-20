@@ -59,6 +59,7 @@ const Navigation = () => {
           <button
             className="liquid-glass-button md:hidden text-gray-700 p-2 rounded-full transition-all duration-300"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
