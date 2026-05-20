@@ -61,7 +61,7 @@ const Hero = () => {
           <div className="relative mb-8">
             <div className="glassmorphism-container inline-block p-8 rounded-3xl backdrop-blur-lg bg-white/3 border border-white/20 shadow-2xl">
               <h1 className="text-6xl md:text-8xl font-thin tracking-tight liquid-glass-text">
-                {personalInfo.name}
+                {personalInfo.name} — AI Engineer
               </h1>
             </div>
           </div>
@@ -122,6 +122,7 @@ const Hero = () => {
         {/* Scroll Indicator */}
         <button
           onClick={scrollToAbout}
+          aria-label="Scroll to about section"
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 hover:text-gray-600 transition-colors duration-300 animate-bounce-subtle liquid-glass-button p-2 rounded-full"
         >
           <ChevronDown size={32} />

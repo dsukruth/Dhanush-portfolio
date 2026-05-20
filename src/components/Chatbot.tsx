@@ -165,6 +165,7 @@ const Chatbot = () => {
                 onChange={(e) => setInput(e.target.value)}
                 onKeyPress={handleKeyPress}
                 placeholder="Message about Dhanush's experience, skills, projects..."
+                aria-label="Ask about Dhanush's experience, skills, or projects"
                 className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-400 text-sm shadow-sm"
                 disabled={isLoading}
               />
