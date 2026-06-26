@@ -160,7 +160,7 @@ const LiquidGlassName: React.FC<LiquidGlassNameProps> = ({
     return () => {
       if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
     };
-  }, [text, containerWidth, fontFamily, minFontSize, maxFontSize, lineHeightRatio]);
+  }, [text, containerWidth, dpr, fontFamily, minFontSize, maxFontSize, lineHeightRatio]);
 
   return (
     <div ref={containerRef} className={className}>
