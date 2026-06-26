@@ -38,6 +38,9 @@ const LiquidGlassName: React.FC<LiquidGlassNameProps> = ({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const rafRef = useRef<number | null>(null);
   const [containerWidth, setContainerWidth] = useState(0);
+  const [dpr, setDpr] = useState(() =>
+    typeof window === 'undefined' ? 1 : Math.min(window.devicePixelRatio || 1, 3)
+  );
 
   // Observe container width for responsive auto-fit.
   useLayoutEffect(() => {
@@ -49,6 +52,32 @@ const LiquidGlassName: React.FC<LiquidGlassNameProps> = ({
     });
     ro.observe(el);
     return () => ro.disconnect();
+  }, []);
+
+  // Track devicePixelRatio changes (e.g. dragging the window between monitors,
+  // browser zoom). matchMedia fires once when the current dpr stops matching.
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    let mql: MediaQueryList | null = null;
+    let cancelled = false;
+
+    const attach = () => {
+      if (cancelled) return;
+      const current = Math.min(window.devicePixelRatio || 1, 3);
+      setDpr(current);
+      mql = window.matchMedia(`(resolution: ${window.devicePixelRatio}dppx)`);
+      const onChange = () => {
+        mql?.removeEventListener('change', onChange);
+        attach();
+      };
+      mql.addEventListener('change', onChange);
+    };
+
+    attach();
+    return () => {
+      cancelled = true;
+      mql?.removeEventListener('change', () => {});
+    };
   }, []);
 
   useEffect(() => {
