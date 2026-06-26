@@ -3,6 +3,7 @@ import { ChevronDown, ArrowRight, MapPin, Mail, Linkedin, Phone, Download } from
 import { personalInfo } from '../data/portfolioData';
 import profilePhoto from '@/assets/profile-photo.jpeg';
 import { WavyBackground } from '@/components/ui/wavy-background';
+import LiquidGlassName from '@/components/LiquidGlassName';
 
 const Hero = () => {
   const [text, setText] = useState('');
@@ -59,10 +60,11 @@ const Hero = () => {
           </div>
 
           <div className="relative mb-8">
-            <div className="glassmorphism-container inline-block p-8 rounded-3xl backdrop-blur-lg bg-white/3 border border-white/20 shadow-2xl">
-              <h1 className="text-6xl md:text-8xl font-thin tracking-tight liquid-glass-text">
-                {personalInfo.name} — AI Engineer
-              </h1>
+            <div className="glassmorphism-container p-8 rounded-3xl backdrop-blur-lg bg-white/3 border border-white/20 shadow-2xl">
+              <LiquidGlassName
+                text={`${personalInfo.name} — AI Engineer`}
+                className="w-full"
+              />
             </div>
           </div>
 
