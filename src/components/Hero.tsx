@@ -3,6 +3,7 @@ import { ChevronDown, ArrowRight, MapPin, Mail, Linkedin, Phone, Download } from
 import { personalInfo } from '../data/portfolioData';
 import profilePhoto from '@/assets/profile-photo.jpeg';
 import { WavyBackground } from '@/components/ui/wavy-background';
+import LiquidGlassName from '@/components/LiquidGlassName';
 
 const Hero = () => {
   const [text, setText] = useState('');
