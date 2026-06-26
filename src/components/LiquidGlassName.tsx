@@ -116,7 +116,7 @@ const LiquidGlassName: React.FC<LiquidGlassNameProps> = ({
     const padY = Math.round(chosenSize * 0.1);
     const cssWidth = containerWidth;
     const cssHeight = chosenLayout.height + padY * 2;
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    // dpr comes from state and updates on display / zoom changes.
 
     canvas.width = Math.round(cssWidth * dpr);
     canvas.height = Math.round(cssHeight * dpr);
