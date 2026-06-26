@@ -60,10 +60,11 @@ const Hero = () => {
           </div>
 
           <div className="relative mb-8">
-            <div className="glassmorphism-container inline-block p-8 rounded-3xl backdrop-blur-lg bg-white/3 border border-white/20 shadow-2xl">
-              <h1 className="text-6xl md:text-8xl font-thin tracking-tight liquid-glass-text">
-                {personalInfo.name} — AI Engineer
-              </h1>
+            <div className="glassmorphism-container p-8 rounded-3xl backdrop-blur-lg bg-white/3 border border-white/20 shadow-2xl">
+              <LiquidGlassName
+                text={`${personalInfo.name} — AI Engineer`}
+                className="w-full"
+              />
             </div>
           </div>
 
